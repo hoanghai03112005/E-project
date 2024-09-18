@@ -1,0 +1,163 @@
+{
+    "Fruits": [
+        {
+            "id": 1,
+            "name": "Grapes",
+            "description": "Grapes are small, sweet fruits that grow in clusters. They come in various colors such as red, green, and purple. Grapes can be eaten fresh or dried into raisins.",
+            "img": "https://themewagon.github.io/fruitables/img/fruite-item-5.jpg",
+            "price": "5"
+        },
+        {
+            "id": 2,
+            "name": "Raspberries",
+            "description": "Raspberries are small, red berries with a sweet and slightly tart flavor. They are rich in vitamin C, fiber, and antioxidants. Raspberries are often enjoyed fresh, in desserts, or added to cereals and yogurt for breakfast.",
+            "img": "https://themewagon.github.io/fruitables/img/fruite-item-2.jpg",
+            "price": "3"
+        },
+        {
+            "id": 3,
+            "name": "Apricots",
+            "description": "Apricots are small, golden-orange fruits with a velvety skin and a sweet, slightly tart flavor. They are rich in vitamin A, vitamin C, and dietary fiber. Apricots can be eaten fresh, dried, or used in cooking and baking.",
+            "img": "https://themewagon.github.io/fruitables/img/fruite-item-4.jpg",
+            "price": "1"
+        },
+        {
+            "id": 4,
+            "name": "Banana",
+            "description": "Bananas are a great source of potassium and fiber. They are convenient to eat and are often considered a quick energy booster. Bananas come in a yellow color when ripe and can vary in size.",
+            "img": "https://themewagon.github.io/fruitables/img/fruite-item-3.jpg",
+            "price": "2"
+        },
+        {
+            "id": 5,
+            "name": "Oranges",
+            "description": "Oranges are known for their high vitamin C content. They are juicy and sweet with a tangy flavor. Oranges are typically orange in color and can be eaten fresh or juiced.",
+            "img": "https://themewagon.github.io/fruitables/img/fruite-item-1.jpg",
+            "price": "8"
+        },
+        {
+            "id": 6,
+            "name": "Strawbery",
+            "description": "Strawberries are juicy, red berries with a sweet and slightly tart flavor. They are packed with vitamin C, antioxidants, and fiber. Strawberries are often enjoyed fresh, in desserts, or blended into smoothies.",
+            "img": "https://img.freepik.com/free-photo/picture-strawbery-white-background_125540-4648.jpg",
+            "price": "7"
+        },
+        {
+            "id": 7,
+            "name": "Apple",
+            "description": "Apples are one of the most popular fruits worldwide. They are rich in fiber, vitamin C, and various antioxidants. Apples come in various colors such as red, green, and yellow.",
+            "img": "https://cdn.britannica.com/22/187222-050-07B17FB6/apples-on-a-tree-branch.jpg",
+            "price": "6"
+        },
+        {
+            "id": 8,
+            "name": "Pumpkin",
+            "description": "Pumpkins are large, orange squash fruits with a sweet and earthy flavor. They are rich in beta-carotene, antioxidants, and fiber. Pumpkins are often used in cooking, particularly in soups, pies, and desserts.",
+            "img": "https://images.ctfassets.net/ruek9xr8ihvu/27b8chmIZZziUA6pag3kUh/236e694fa4f1c3b8a6e867e64ccec97d/Pumpkin-for-Babies-scaled.jpg?w=2000&q=80&fm=webp",
+            "price": "4"
+        },
+        {
+            "id": 9,
+            "name": "Almond Butter",
+            "description": "Almond butter is a spread made from ground, roasted almonds. It has a creamy texture and a slightly sweet, nutty flavor. Almond butter is rich in protein, healthy fats, and essential vitamins and minerals. It is often used as a spread on toast, in smoothies, or as a dip for fruit and vegetables.",
+            "img": "https://www.inspiredtaste.net/wp-content/uploads/2020/06/Homemade-Almond-Butter-Recipe-1200.jpg",
+            "price": "3"
+        },
+        {
+            "id": 10,
+            "name": "Mango",
+            "description": "Mangoes are tropical fruits known for their sweet and juicy flavor. They are rich in vitamin C, vitamin A, and dietary fiber. Mangoes have a golden-yellow skin and orange flesh when ripe.",
+            "img": "https://product.hstatic.net/200000325223/product/z2448801590715_13b24f7c102a0157944e3358d8435576_51e47991308140389238830f068c0f34_master.jpg",
+            "price": "2"
+        },
+        {
+            "id": 11,
+            "name": "Pineapple",
+            "description": "Pineapples are tropical fruits with a sweet and tangy taste. They are rich in vitamin C, manganese, and bromelain, an enzyme with anti-inflammatory properties. Pineapples have a rough, spiky skin and yellow flesh.",
+            "img": "https://assets.clevelandclinic.org/transform/8e5f4b64-5210-4bb7-aaeb-402affc17d3d/BenefitsOfPineapple-955346588-770x533-1_jpg",
+            "price": "2"
+        },
+        {
+            "id": 12,
+            "name": "Avocador",
+            "description": "Avocado is a creamy fruit with a rich, buttery flavor. It is high in healthy fats, fiber, and potassium. Avocados are commonly used in salads, sandwiches, and guacamole.",
+            "img": "https://images.everydayhealth.com/images/diet-nutrition/avocados-super-food-heart-health-high-cholesterol-722x406.jpg?sfvrsn=63e9b0e9_2",
+            "price": "1"
+        },
+        {
+            "id": 13,
+            "name": "Papaya",
+            "description": "Papaya is a tropical fruit with a sweet and musky flavor. It is rich in vitamin C, vitamin A, and digestive enzymes like papain. Papayas are often eaten fresh or blended into smoothies.",
+            "img": "https://www.heart.org/-/media/Images/News/2023/October-2023/1013EIOLIPapaya_SC.jpg",
+            "price": "3"
+        },
+        {
+            "id": 14,
+            "name": "Dragon Fruit",
+            "description": "Dragon fruit, also known as pitaya, is a unique-looking fruit with a sweet and mild flavor. It is rich in antioxidants, fiber, and vitamin C. Dragon fruit comes in different varieties, including white and pink flesh.",
+            "img": "https://www.bhg.com/thmb/nD7KuEcNZTdYXCqBmr9eePwINSs=/1866x0/filters:no_upscale():strip_icc()/sliced-dragon-fruit-0822-26e01e3150fe4a629da202651a82369a.jpg",
+            "price": "2"
+        },
+        {
+            "id": 15,
+            "name": "Blueberry",
+            "description": "Blueberries are small, round berries with a sweet and tangy taste. They are high in antioxidants, vitamin C, and fiber. Blueberries are commonly eaten fresh, added to baked goods, or used in jams and sauces.",
+            "img": "https://blueberry.org/wp-content/uploads/2021/04/Fresh-Highbush-Blueberries-in-Heart-Dish-edited.jpg",
+            "price": "8"
+        },
+        {
+            "id": 16,
+            "name": "Kiwi",
+            "description": "Kiwi is a small, fuzzy fruit with a tangy and sweet flavor. It is rich in vitamin C, vitamin K, and dietary fiber. Kiwi is typically eaten by scooping out the flesh with a spoon or adding it to fruit salads.",
+            "img": "https://suckhoedoisong.qltns.mediacdn.vn/324455921873985536/2021/12/17/avatar1639700789953-16397007912601666782058-1639708606372-163970860760357750022.jpg",
+            "price": "6"
+        },
+        {
+            "id": 17,
+            "name": "Peach",
+            "description": "Peaches are soft, juicy fruits with a sweet and fragrant taste. They are a good source of vitamin C, vitamin A, and potassium. Peaches are often eaten fresh, grilled, or used in pies and cobblers.",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8dTVBffAeXr-TJMvyokC21v0u1lLOOAYjwlUkxSkymQ&s",
+            "price": "2"
+        },
+        {
+            "id": 18,
+            "name": "Cherry",
+            "description": "Cherries are small, round fruits with a sweet and tart flavor. They are rich in antioxidants, particularly anthocyanins. Cherries can be eaten fresh, used in desserts, or dried into raisins.",
+            "img": "https://sunsay.vn/wp-content/uploads/2022/01/cherry-say-2.png",
+            "price": "5"
+        },
+        {
+            "id": 19,
+            "name": "Watermelon",
+            "description": "Watermelon is a refreshing fruit with high water content. It is sweet and juicy, perfect for hot summer days. Watermelon is typically red or pink on the inside and green on the outside.",
+            "img": "https://hips.hearstapps.com/hmg-prod/images/fresh-ripe-watermelon-slices-on-wooden-table-royalty-free-image-1684966820.jpg?crop=0.88973xw:1xh;center,top&resize=1200:*",
+            "price": "4"
+        },
+        {
+            "id": 20,
+            "name": "Lemon",
+            "description": "Lemons are citrus fruits with a bright yellow, tart outer skin and juicy, sour flesh. They are high in vitamin C and antioxidants. Lemons are often used in cooking, baking, and making beverages such as lemonade.",
+            "img": "https://assets.bonappetit.com/photos/65d8e8cdac1363495746a07a/16:9/w_2560%2Cc_limit/GettyImages-1164354567%2520copy.jpg",
+            "price": "1"
+        },
+        {
+            "id": 21,
+            "name": "Pear",
+            "description": "Pears are sweet and juicy fruits with a crisp texture. They come in various colors, including green, red, and yellow. Pears are rich in fiber, vitamin C, and potassium. They can be eaten fresh or used in cooking and baking.",
+            "img": "https://cdn.shopify.com/s/files/1/0059/8835/2052/files/Kieffer_pear_5_FGT_8e20f03c-c1b8-4474-b089-71af5b086aaa.jpg",
+            "price": "2"
+        },
+        {
+            "id": 22,
+            "name": "Brocoli",
+            "description": "The generated Lorem Ipsum is therefore always free from repetition injected humour, or non-characteristic words etc.Susp endisse ultricies nisi vel quam suscipit. Sabertooth peacock flounder; chain pickerel hatchetfish, pencilfish snailfish",
+            "img": "https://domf5oio6qrcr.cloudfront.net/medialibrary/5390/h1218g16207258089583.jpg",
+            "price": "3"
+        }
+        
+
+        
+    ]
+      
+    
+}
