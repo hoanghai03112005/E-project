@@ -32,17 +32,16 @@ export default function Shop_1() {
 
     var fetchData = async function () {
         setProducts([]) // xóa dữ liệu trước đó để k hiện chung với dữ liệu mới
-        var res = await fetch(`http://127.0.0.1:5500/src/API/data.json`)
+        var res = await fetch(`http://localhost:3001/Fruits?_sort=${sortOrder}`)
         var data = await res.json()
        
-        if (data.Fruits && Array.isArray(data.Fruits)) {
-            setProducts(prevFruit => [...prevFruit, ...data.Fruits]);
+        
+            setProducts(prevFruit => [...prevFruit, ...data]);
             setTest(true);
-            const totalPage = Math.ceil(data.Fruits.length / itemsPerPage);
+            const totalPage = Math.ceil(data.length / itemsPerPage);
             settotalProduct(totalPage);
-        } else {
-            console.error("Dữ liệu không chứa thuộc tính Fruits hoặc thuộc tính này không phải là mảng.");
-        } 
+        
+        
     }
 
 
