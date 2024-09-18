@@ -1,17 +1,12 @@
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 export default function Home_1() { // carousel
 
     const navigate = useNavigate();
     var onSearch = (event) => {
         event.preventDefault()
         var keyword = event.target.keyword.value
-        navigate(`/search/${keyword}`,{replace: true});
+        navigate(`/search/${keyword}`, { replace: true });
     }
-
-
-
-
-
 
     return (
         <>
@@ -19,23 +14,19 @@ export default function Home_1() { // carousel
                 <div class="container py-5">
                     <div class="row g-5 align-items-center">
                         <div class="col-md-12 col-lg-7">
-                            <h4 class="mb-3 text-secondary">100% Organic Foods</h4>
-                            <h1 class="mb-5 display-3 text-primary">Organic Veggies & Fruits Foods</h1>
-                            <form class="position-relative mx-auto" onSubmit={onSearch}>
-                                    <input class="form-control border-2 border-secondary w-75 py-3 px-4 rounded-pill" type="text" placeholder="Search" name="keyword"/>
-                                    <button type="submit" class="btn btn-primary border-2 border-secondary py-3 px-4 position-absolute rounded-pill text-white h-100" style={{top: "0", right: "25%"}}>Submit Now</button>
-                            </form>
-                        </div>
-                        <div class="col-md-12 col-lg-5">
                             <div id="carouselId" class="carousel slide position-relative" data-bs-ride="carousel">
                                 <div class="carousel-inner" role="listbox">
                                     <div class="carousel-item active rounded">
-                                        <img src="img/hero-img-1.png" class="img-fluid w-100 h-100 bg-secondary rounded" alt="First slide" />
-                                        <a href="" class="btn px-4 py-2 text-white rounded">Fruits</a>
+                                        <img src="img/banner/banner1.jpg" class="img-fluid w-100 h-150 bg-secondary rounded" alt="First slide" />
                                     </div>
                                     <div class="carousel-item rounded">
-                                        <img src="img/hero-img-2.jpg" class="img-fluid w-100 h-100 rounded" alt="Second slide" />
-                                        <a href="" class="btn px-4 py-2 text-white rounded">Vegetables</a>
+                                        <img src="img/banner/banner2.jpg" class="img-fluid w-100 h-150 rounded" alt="Second slide" />
+                                    </div>
+                                    <div class="carousel-item rounded">
+                                        <img src="img/banner/banner3.jpg" class="img-fluid w-100 h-150 rounded" alt="Third slide" />
+                                    </div>
+                                    <div class="carousel-item rounded">
+                                        <img src="img/banner/banner4.jpg" class="img-fluid w-100 h-150 rounded" alt="Fourth slide" />
                                     </div>
                                 </div>
                                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
@@ -47,6 +38,13 @@ export default function Home_1() { // carousel
                                     <span class="visually-hidden">Next</span>
                                 </button>
                             </div>
+                        </div>
+                        <div class="col-md-12 col-lg-5">
+                            <h1 class="mb-5 display-5 text-white">HOME IS THE SOURCE OF ALL HAPPINESS</h1>
+                            <form class="position-relative mx-auto" onSubmit={onSearch}>
+                                <input class="form-control border-2 border-secondary w-100 py-3 px-4 rounded-pill" type="text" placeholder="Search" name="keyword" />
+                                <button type="submit" class="btn btn-dark border-2  py-7 px-4 position-absolute rounded-pill text-white h-100" style={{ top: "0", right: "0%" }}>Search</button>
+                            </form>
                         </div>
                     </div>
                 </div>
