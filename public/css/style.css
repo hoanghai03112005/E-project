@@ -117,6 +117,11 @@
 /*** Topbar End ***/
 
 /*** Navbar Start ***/
+.container-fluid.fixed-top, navbar.navbar-light.bg-white.navbar-expand-xl {
+    background-color: #45595b;
+}
+
+
 .navbar .navbar-nav .nav-link {
     padding: 10px 15px;
     font-size: 16px;
@@ -178,7 +183,7 @@
 
 /*** Hero Header ***/
 .hero-header {
-    background: linear-gradient(rgba(248, 223, 173, 0.1), rgba(248, 223, 173, 0.1)), url(../img/hero-img.jpg);
+    background: linear-gradient(rgba(248, 223, 173, 0.1), rgba(248, 223, 173, 0.1)), url(../img/banner/BG1.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -203,7 +208,7 @@
     height: 48px;
     border-radius: 48px;
     border: 1px solid var(--bs-white);
-    background: var(--bs-primary);
+    background: var(--bs-dark);
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -252,12 +257,12 @@
     content: "";
     width: 35px;
     height: 35px;
-    background: var(--bs-secondary);
+    background: var(--bs-dark);
     position: absolute;
     bottom: -10px;
     transform: translate(-50%);
     transform: rotate(45deg);
-    background: var(--bs-secondary);
+    background: var(--bs-dark);
     
 }
 /*** featurs End ***/
