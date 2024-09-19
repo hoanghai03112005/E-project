@@ -1,56 +1,64 @@
-import React from "react"
-import { useParams } from "react-router-dom"
-import { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 export default function Search2() {
-    var [product, setProduct] = useState([])
-    var [test, setTest] = useState(false)
-    const {name} = useParams()
+    const [products, setProducts] = useState([]);
+    const [filteredProducts, setFilteredProducts] = useState([]);
+    const location = useLocation();
+    const queryParams = new URLSearchParams(location.search);
+    const category = queryParams.get('category');
+    const searchQuery = queryParams.get('query') || localStorage.getItem('searchKeyword'); // Lấy từ khóa từ query hoặc localStorage
 
+    useEffect(() => {
+        const fetchData = async () => {
+            const res = await fetch('http://localhost:3001/Fruits');
+            const data = await res.json();
+            setProducts(data);
+        };
 
-    useEffect(function() {
-        if( !test ) {
-            fetchData()
+        fetchData();
+    }, []);
+
+    useEffect(() => {
+        let filtered = products;
+
+        if (category && category !== 'all') {
+            filtered = filtered.filter(product => product.category === category);
         }
-    }, [test])
 
-    const fetchData = async function () {
-        var res = await fetch('http://localhost:3001/Fruits')
-        var data = await res.json()
-        setProduct(prevFruit => [...prevFruit, ...data])
-        setTest(true)
-    }
+        if (searchQuery) {
+            filtered = filtered.filter(product =>
+                product.name.toLowerCase().includes(searchQuery.toLowerCase())
+            );
+        }
 
-
-    var selectName = product.filter(item => {
-        return item.name.toLowerCase().includes(name.toLowerCase())
-    })
+        setFilteredProducts(filtered);
+    }, [products, category, searchQuery]);
 
     return (
-        <>
-            {
-                selectName.map(item => {
-                    return (
-                        <div class="col-md-4" >
-                                        <div class="rounded position-relative fruite-item" key={item.id}>
-                                            <div class="fruite-img">
-                                                <Link to={`http://localhost:3000/shop-detail/${item.id}`}><img src={item.img} class="img-fluid w-100 rounded-top" alt="" /></Link>
-                                            </div>
-                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style={{top: '10px', left: '10px'}}>Fruits</div>
-                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom" >
-                                                <h4>{item.name}</h4>
-                                                <p>{item.description}</p>
-                                                <div class="d-flex justify-content-between flex-lg-wrap">
-                                                    <p class="text-dark fs-5 fw-bold mb-0">{item.price}/ kg</p>
-                                                    <Link to={`http://localhost:3000/shop-detail/${item.id}`} class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> View Detail</Link>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                    )
-                    
-                })
-            }
-        </>
-    )
+        <div>
+            {filteredProducts.map(product => (
+                <div className="col-md-4" key={product.id}>
+                <div className="rounded position-relative fruite-item">
+                    <div className="fruite-img">
+                        <Link to={`http://localhost:3000/shop-detail/${product.id}`}>
+                            <img src={product.img} className="img-fluid w-100 rounded-top" alt="" />
+                        </Link>
+                    </div>
+                    <div className="text-white bg-secondary px-3 py-1 rounded position-absolute" style={{top: '10px', left: '10px'}}>Fruits</div>
+                    <div className="p-4 border border-secondary border-top-0 rounded-bottom">
+                        <h4>{product.name}</h4>
+                        <p>{product.description}</p>
+                        <div className="d-flex justify-content-between flex-lg-wrap">
+                            <p className="text-dark fs-5 fw-bold mb-0">{product.price}/ kg</p>
+                            <Link to={`http://localhost:3000/shop-detail/${product.id}`} className="btn border border-secondary rounded-pill px-3 text-primary">
+                                <i className="fa fa-shopping-bag me-2 text-primary"></i> View Detail
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            ))}
+        </div>
+    );
 }
