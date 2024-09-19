@@ -12,11 +12,8 @@
      visibility: visible;
      opacity: 1;
  }
- .fruite-categorie ul {
-    list-style-type: none;
-    padding: 0;
-}
 
+<<<<<<< HEAD
 .fruite-categorie li {
     margin: 0.5rem 0;
 }
@@ -48,6 +45,8 @@
   .category-item {
     position: relative; /* Để các phần tử con tuyệt đối có thể dựa vào */
   }
+=======
+>>>>>>> 04685c7bd9a83457a61d4c3656fe5ef04a1a763a
  .back-to-top {
     position: fixed;
     right: 30px;
@@ -493,7 +492,7 @@
 
 /*** Single Page Start ***/
 .pagination {
-    display: inline-block;
+    
 }
   
 .pagination a {
