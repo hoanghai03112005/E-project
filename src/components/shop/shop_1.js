@@ -16,31 +16,31 @@ export default function Shop_1() {
 
     useEffect(() => {
         fetchData();
-    }, []);
+    }, [sortOrder, selectedCategory]);
 
     const fetchData = async () => {
         const res = await fetch(`http://localhost:3001/Fruits?_sort=${sortOrder}`);
         const data = await res.json();
         const uniqueCategory = [...new Set(data.map(fruit => fruit.category))];
         setCats(uniqueCategory);
-        setProducts(data);
-        setFilteredProducts(data);
-        setTotalProduct(Math.ceil(data.length / itemsPerPage));
+        
+        // Lọc dữ liệu dựa trên danh mục đã chọn
+        const filtered = selectedCategory === "" ? data : data.filter(product => product.category === selectedCategory);
+        setProducts(filtered);
+        setFilteredProducts(filtered);
+        setTotalProduct(Math.ceil(filtered.length / itemsPerPage));
     };
 
     const handleSortChange = (event) => {
         setSortOrder(event.target.value);
-        fetchData();
     };
 
     const handleCategoryClick = (category) => {
         setSelectedCategory(category);
-        const filtered = category === "" ? products : products.filter(product => product.category === category);
-        setFilteredProducts(filtered);
-        setCurrentPage(0);
     };
 
     useEffect(() => {
+        // Khi lọc hoặc sắp xếp thay đổi, cập nhật trang và số trang
         setTotalProduct(Math.ceil(filteredProducts.length / itemsPerPage));
         setCurrentPage(0);
     }, [filteredProducts]);
