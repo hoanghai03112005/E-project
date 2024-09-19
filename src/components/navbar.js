@@ -28,7 +28,8 @@ export default function Navbar() {
                         <div class="navbar-nav mx-auto">
                             <Link to={'/'} class="nav-item nav-link text-white active">Home</Link>
                             <Link to={'/'} class="nav-item nav-link text-white ">Design Styles</Link>
-                            <Link to={'/'} class="nav-item nav-link text-white ">Professional Interior Designers Gallery </Link>
+                            <Link to={'/'} class="nav-item nav-link text-white ">Professional Interior</Link>
+                            <Link to={'/'} class="nav-item nav-link text-white ">Designers Gallery</Link>
                             <Link to={'/shop'} class="nav-item nav-link text-white ">Products</Link>
                             <Link to={'/contact'} class="nav-item nav-link text-white ">Contact Us</Link>
                             <Link to={'/feedback'} class="nav-item nav-link text-white ">Feedback</Link>
