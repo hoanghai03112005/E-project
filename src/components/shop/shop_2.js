@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, Link } from 'react-router-dom';
 import ReactPaginate from 'react-paginate';
-import Pagination from 'react-responsive-pagination'
+
 
 export default function Shop_2() {
     const [sortOrder, setSortOrder] = useState("");
