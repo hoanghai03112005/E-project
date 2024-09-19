@@ -1,30 +1,48 @@
-export default function home_4() { //Banner Section
+export default function Home_4() { //Banner Section
     return (
-        <div class="container-fluid banner bg-secondary my-5">
-        <div class="container py-5">
-            <div class="row g-4 align-items-center">
-                <div class="col-lg-6">
-                    <div class="py-4">
-                        <h1 class="display-3 text-white">Fresh Exotic Fruits</h1>
-                        <p class="fw-normal display-3 text-dark mb-4">in Our Store</p>
-                        <p class="mb-4 text-dark">The generated Lorem Ipsum is therefore always free from repetition injected humour, or non-characteristic words etc.</p>
-                        <a href="#" class="banner-btn btn border-2 border-white rounded-pill text-dark py-3 px-5">BUY</a>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="position-relative">
-                        <img src="img/baner-1.png" class="img-fluid w-100 rounded" alt="" />
-                        <div class="d-flex align-items-center justify-content-center bg-white rounded-circle position-absolute" style={{width: '140px', height: '140px', top: '0', left: '0',}}>
-                            <h1 style={{fontSize: '100px'}}>1</h1>
-                            <div class="d-flex flex-column">
-                                <span class="h2 mb-0">50$</span>
-                                <span class="h4 text-muted mb-0">kg</span>
+        <>
+            <div class="container-fluid banner bg-white my-5">
+                <div class="container py-5">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-lg-7">
+                            <img src="img/homeImage/sofa1.jpg" class="img-fluid w-100 rounded" alt="" />
+                            <div class="px-6 py-1">
+                                <div class="service-content bg-dark text-center p-4 rounded">
+                                    <h5 class="text-white">Living Room Furniture </h5>
+                                    <button type="submit" class="btn btn-dark bg-white border-1 border-dark rounded text-dark h-150">View</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="px-6 py-1">
+                                <div class="service-content bg-dark text-center p-4 rounded">
+                                    <h5 class="text-white">Bedroom Furniture</h5>
+                                    <button type="submit" class="btn btn-dark bg-white border-1 border-dark rounded text-dark h-150">View</button>
+                                </div>
+                            </div>
+                            <img src="img/homeImage/sofa2.jpg" class="img-fluid w-100 rounded" alt="" />
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="px-6 py-1">
+                                <div class="service-content bg-dark text-center p-4 rounded">
+                                    <h5 class="text-white">Kitchen Furniture</h5>
+                                    <button type="submit" class="btn btn-dark bg-white border-1 border-dark rounded text-dark h-150">View</button>
+                                </div>
+                            </div>
+                            <img src="img/homeImage/sofa3.jpg" class="img-fluid w-100 rounded" alt="" />
+                        </div>
+                        <div class="col-lg-7">
+                            <img src="img/homeImage/bookcase1.jpg" class="img-fluid w-100 rounded" alt="" />
+                            <div class="px-6 py-1">
+                                <div class="service-content bg-dark text-center p-4 rounded">
+                                    <h5 class="text-white">Children Furniture</h5>
+                                    <button type="submit" class="btn btn-dark bg-white border-1 border-dark rounded text-dark h-150">View Details </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </>
     )
 }
