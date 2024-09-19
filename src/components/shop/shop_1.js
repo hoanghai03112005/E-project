@@ -65,7 +65,8 @@ export default function Shop_1() {
                                     <form className="input-group w-100 mx-auto d-flex" onSubmit={event => {
                                         event.preventDefault();
                                         const keyword = event.target.keyword.value;
-                                        navigate(`/search/${keyword}`, { replace: true });
+                                        localStorage.setItem('searchKeyword', keyword);
+                                        navigate(`/search?query=${encodeURIComponent(keyword)}`, { replace: true });
                                     }}>
                                         <input type="text" className="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1" name="keyword" />
                                         <button id="search-icon-1" className="input-group-text p-3"><i className="fa fa-search"></i></button>
