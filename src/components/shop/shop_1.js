@@ -12,6 +12,8 @@ export default function Shop_1() {
     const [itemsPerPage] = useState(6);
     const [selectedCategory, setSelectedCategory] = useState("");
     const [expandedCategory, setExpandedCategory] = useState(null);
+    const [openCategory, setOpenCategory] = useState(null);
+
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -19,53 +21,76 @@ export default function Shop_1() {
     }, [sortOrder, selectedCategory]);
 
     const fetchData = async () => {
-        // Fetch danh mục
-        const categoriesRes = await fetch('http://localhost:3001/categories');
-        const categoriesData = await categoriesRes.json();
-        
-        // Chuyển đổi cấu trúc đối tượng categoriesData thành mảng
-        const transformedCategories = Object.keys(categoriesData).map(categoryKey => ({
-            name: categoryKey,
-            products: categoriesData[categoryKey]
-        }));
-        
-        setCats(transformedCategories);
+        try {
+            // Fetch danh mục
+            const categoriesRes = await fetch('http://localhost:3001/categories');
+            const categoriesData = await categoriesRes.json();
+            console.log("Categories Data:", categoriesData);
 
-        // Fetch sản phẩm và lọc theo danh mục
-        const res = await fetch(`http://localhost:3001/products?_sort=${sortOrder}`);
-        const data = await res.json();
-        
-        let filtered = [];
+            // Chuyển đổi cấu trúc đối tượng categoriesData thành mảng
+            const transformedCategories = Object.keys(categoriesData).map(categoryKey => ({
+                name: categoryKey,
+                products: categoriesData[categoryKey]
+            }));
+            setCats(transformedCategories);
 
-        if (selectedCategory) {
-            const selectedCat = transformedCategories.find(cat => cat.name === selectedCategory);
-            filtered = selectedCat ? selectedCat.products : [];
-        } else {
-            filtered = transformedCategories.flatMap(cat => cat.products);
+            // Fetch sản phẩm và lọc theo danh mục
+            const res = await fetch(`http://localhost:3001/products?_sort=${sortOrder}`);
+            const data = await res.json();
+            console.log("Products Data:", data);
+
+            let filtered = [];
+
+            if (selectedCategory === "All" || !selectedCategory) {
+                // Hiển thị tất cả sản phẩm nếu "All" được chọn
+                filtered = data;
+            } else {
+                // Lọc sản phẩm theo danh mục nếu một danh mục cụ thể được chọn
+                const selectedCat = transformedCategories.find(cat => cat.name === selectedCategory);
+                filtered = selectedCat ? selectedCat.products : [];
+            }
+
+            const nonEmptyFiltered = filtered.filter(item => item && item.length > 0);
+            console.log("Non-Empty Filtered Products:", nonEmptyFiltered);
+
+            setProducts(nonEmptyFiltered);
+            setFilteredProducts(nonEmptyFiltered);
+            setTotalProduct(Math.ceil(nonEmptyFiltered.length / itemsPerPage));
+        } catch (error) {
+            console.error("Error fetching data:", error);
         }
-        
-        setProducts(filtered);
-        setFilteredProducts(filtered);
-        setTotalProduct(Math.ceil(filtered.length / itemsPerPage));
     };
 
+
+
+
+
+    
     const handleSortChange = (event) => {
         setSortOrder(event.target.value);
     };
 
     const handleCategoryClick = (category) => {
-        setExpandedCategory(expandedCategory === category ? null : category);
-      };
+        setSelectedCategory(category)
+        setOpenCategory(openCategory === category ? null : category);
+    };
+    
 
     useEffect(() => {
         setTotalProduct(Math.ceil(filteredProducts.length / itemsPerPage));
         setCurrentPage(0);
+        console.log("Filtered Products (useEffect):", filteredProducts);
     }, [filteredProducts]);
 
     const indexOfLastItem = (currentPage + 1) * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-    const currentItem = filteredProducts.slice(indexOfFirstItem, indexOfLastItem);
-
+    
+    // Đảm bảo rằng chỉ số không vượt quá số lượng phần tử
+    const safeIndexOfLastItem = Math.min(indexOfLastItem, filteredProducts.length);
+    const safeIndexOfFirstItem = Math.min(indexOfFirstItem, filteredProducts.length);
+    
+    const currentItem = filteredProducts.slice(safeIndexOfFirstItem, safeIndexOfLastItem);
+    console.log("Current Item:", currentItem);
     const handlePageClick = ({ selected }) => {
         setCurrentPage(selected);
     };
@@ -104,43 +129,42 @@ export default function Shop_1() {
                                 </div>
                             </div>
                             <div className="row g-4">
-                                <div className="col-lg-3">
-                                    <div className="row g-4">
-                                        <div className="col-lg-12">
-                                            <div className="mb-3">
-                                                <h4>Categories</h4>
-                                                <ul className="list-unstyled fruite-categorie">
-                                                    <li>
-                                                        <div onClick={() => handleCategoryClick("")} className="d-flex justify-content-between fruite-name">
-                                                            <a href="#"><i className="fas fa-apple-alt me-2"></i>All</a>
-                                                        </div>
-                                                    </li>
-
-                                                    {cats.map((item, index) => (
-                                                        <li key={index}>
-                                                            <div 
-                                                                className="d-flex justify-content-between fruite-name"
-                                                                onClick={() => handleCategoryClick(item.name)}
-                                                            >
-                                                                <a href="#"><i className="fas fa-apple-alt me-2"></i>{item.name}</a>
-                                                            </div>
-                                                            {expandedCategory === item.name && (
-    <ul className="sub-category">
-      {item.products.map(subCategory => (
-        <li key={subCategory.id}>
-          <a href="#">{subCategory.name}</a>
-        </li>
-      ))}
-    </ul>
-  )}
+                            <div className="col-lg-3">
+    <div className="row g-4">
+        <div className="col-lg-12">
+            <div className="mb-3">
+                <h4>Categories</h4>
+                <ul className="list-unstyled fruite-categorie">
+                    <li>
+                        <div onClick={() => handleCategoryClick("")} className="d-flex justify-content-between fruite-name">
+                            <a href="#"><i className="fas fa-apple-alt me-2"></i>All</a>
+                        </div>
+                    </li>
+                    {cats.map((item, index) => (
+                        <li key={index}>
+                            <div 
+                                onClick={() => handleCategoryClick(item.name)} 
+                                className="d-flex justify-content-between fruite-name"
+                            >
+                                <a href="#"><i className="fas fa-apple-alt me-2"></i>{item.name}</a>
+                            </div>
+                            {openCategory === item.name && (
+                                <ul className="list-unstyled ps-4">
+                                    {item.products.map(product => (
+                                        <li key={product.id}>
+                                            <a href="#">{product.name}</a>
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
                         </li>
                     ))}
-                                                   
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
                                 <div className="col-lg-9">
                                     <div className="row g-4 justify-content-center">
                                         {currentItem.map(item => (

@@ -29,6 +29,9 @@
     padding-left: 1.5rem;
 }
 
+
+
+
 .sub-category {
     position: absolute; /* Đặt vị trí tuyệt đối để có thể điều chỉnh dễ dàng */
     top: 100%; /* Vị trí xuống bên dưới danh mục cha */
@@ -37,6 +40,8 @@
     box-shadow: 0px 4px 8px rgba(0,0,0,0.2); /* Để có hiệu ứng bóng đổ */
     padding: 10px; /* Khoảng cách bên trong */
     z-index: 1000; /* Đảm bảo nó nằm trên các phần tử khác */
+    padding-left: 1.5rem;
+    cursor: pointer;
   }
   
   /* CSS cho danh mục cha */
