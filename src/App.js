@@ -8,7 +8,7 @@ import ShopDetail from './components/shopDetail';
 import Search from './components/search/searchMain';
 import { Route, Routes } from 'react-router-dom';
 import Footer from './components/footer';
-
+import Feedback from './components/feedback/feedback';
 
 
 function App() {
@@ -20,7 +20,8 @@ function App() {
             <Route path='/shop' element={<ShopMain />} />
             <Route path='/login' element={<Login />} />
             <Route path='/shop-detail/:id' element={<ShopDetail />} />
-            <Route path='/search/:name' element={<Search />} />
+            <Route path='/search/' element={<Search />} />
+            <Route path='/feedback' element={<Feedback />} />
         </Routes>
         <Footer />
     </div>
