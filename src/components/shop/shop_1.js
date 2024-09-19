@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import ReactPaginate from 'react-paginate';
 import { Link } from "react-router-dom";
+
 export default function Shop_1() {
     const [sortOrder, setSortOrder] = useState("");
     const [products, setProducts] = useState([]);
@@ -46,13 +47,20 @@ export default function Shop_1() {
                     filtered = productsArray;
                 } else {
                     // Lọc sản phẩm theo danh mục nếu một danh mục cụ thể được chọn
-                    const selectedCat = transformedCategories.find(cat => cat.name === selectedCategory);
-                    filtered = selectedCat ? selectedCat.products : [];
+                    const selectedCat = transformedCategories.find(cat => 
+                        cat.products.some(product => product.name === selectedCategory)
+                    );
+
+                    if (selectedCat) {
+                        filtered = productsArray.filter(product => 
+                            selectedCat.products.some(p => p.name === selectedCategory && p.id === product.categoryId)
+                        );
+                    }
                 }
 
                 console.log("Filtered Products:", filtered);
 
-                setProducts(productsArray);
+                setProducts(filtered);
                 setFilteredProducts(filtered);
                 setTotalProduct(Math.ceil(filtered.length / itemsPerPage));
             } catch (error) {
@@ -74,8 +82,20 @@ export default function Shop_1() {
     };
 
     const handleCategoryClick = (category) => {
-        setSelectedCategory(category);
-        setOpenCategory(openCategory === category ? null : category);
+        if (category === "All") {
+            // Khi nhấn vào "All", đặt lại selectedCategory và mở tất cả danh mục
+            setSelectedCategory("All");
+            setOpenCategory(null); // Đóng tất cả danh mục
+        } else {
+            // Xử lý nhấn vào danh mục lớn
+            setOpenCategory(openCategory === category ? null : category);
+            setSelectedCategory("All"); // Đặt lại khi mở danh mục lớn
+        }
+    };
+
+    const handleSubCategoryClick = (subCategory) => {
+        setSelectedCategory(subCategory);
+        setOpenCategory(null); // Đóng danh mục khi chọn một danh mục con
     };
 
     const indexOfLastItem = (currentPage + 1) * itemsPerPage;
@@ -85,6 +105,7 @@ export default function Shop_1() {
     const safeIndexOfFirstItem = Math.min(indexOfFirstItem, filteredProducts.length);
 
     const currentItem = filteredProducts.slice(safeIndexOfFirstItem, safeIndexOfLastItem);
+
     console.log("Current Item:", currentItem);
 
     const handlePageClick = ({ selected }) => {
@@ -148,7 +169,7 @@ export default function Shop_1() {
                                                                 <ul className="list-unstyled ps-4">
                                                                     {item.products.map(product => (
                                                                         <li key={product.id}>
-                                                                            <a href="#">{product.name}</a>
+                                                                            <a href="#" onClick={() => handleSubCategoryClick(product.name)}>{product.name}</a>
                                                                         </li>
                                                                     ))}
                                                                 </ul>
