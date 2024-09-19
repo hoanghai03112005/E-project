@@ -1,4 +1,5 @@
 import React from "react";
+import Contact from "./contact_us/contact";
 import { Link } from "react-router-dom"
 
 export default function Navbar() {

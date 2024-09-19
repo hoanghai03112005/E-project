@@ -23,7 +23,7 @@ export default function Shop_1() {
         const data = await res.json();
         const uniqueCategory = [...new Set(data.map(fruit => fruit.category))];
         setCats(uniqueCategory);
-        
+
         // Lọc dữ liệu dựa trên danh mục đã chọn
         const filtered = selectedCategory === "" ? data : data.filter(product => product.category === selectedCategory);
         setProducts(filtered);
