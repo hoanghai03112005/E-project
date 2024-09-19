@@ -42,7 +42,7 @@ export default function Search2() {
                 <div className="rounded position-relative fruite-item">
                     <div className="fruite-img">
                         <Link to={`http://localhost:3000/shop-detail/${product.id}`}>
-                            <img src={product.img} className="img-fluid w-100 rounded-top" alt="" />
+                            <img src={product.img} className="img w-100 rounded-top" alt="" />
                         </Link>
                     </div>
                     <div className="text-white bg-secondary px-3 py-1 rounded position-absolute" style={{top: '10px', left: '10px'}}>Fruits</div>

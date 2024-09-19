@@ -27,6 +27,7 @@ function App() {
             <Route path='/shop-detail/:id' element={<ShopDetail />} />
             <Route path='/search/' element={<Search />} />
             <Route path='/feedback' element={<Feedback />} />
+            <Route path='/contact' element={<Contact />} />
         </Routes>
         <Footer />
       
