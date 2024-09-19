@@ -12,7 +12,37 @@
      visibility: visible;
      opacity: 1;
  }
+ .fruite-categorie ul {
+    list-style-type: none;
+    padding: 0;
+}
 
+.fruite-categorie li {
+    margin: 0.5rem 0;
+}
+
+.fruite-categorie .d-flex {
+    cursor: pointer;
+}
+
+.fruite-categorie .ps-4 {
+    padding-left: 1.5rem;
+}
+
+.sub-category {
+    position: absolute; /* Đặt vị trí tuyệt đối để có thể điều chỉnh dễ dàng */
+    top: 100%; /* Vị trí xuống bên dưới danh mục cha */
+    left: 0; /* Đặt lùi về phía trái */
+    background-color: #fff; /* Màu nền để nó nổi bật */
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2); /* Để có hiệu ứng bóng đổ */
+    padding: 10px; /* Khoảng cách bên trong */
+    z-index: 1000; /* Đảm bảo nó nằm trên các phần tử khác */
+  }
+  
+  /* CSS cho danh mục cha */
+  .category-item {
+    position: relative; /* Để các phần tử con tuyệt đối có thể dựa vào */
+  }
  .back-to-top {
     position: fixed;
     right: 30px;

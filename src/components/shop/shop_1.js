@@ -11,7 +11,7 @@ export default function Shop_1() {
     const [totalProduct, setTotalProduct] = useState(0);
     const [itemsPerPage] = useState(6);
     const [selectedCategory, setSelectedCategory] = useState("");
-
+    const [expandedCategory, setExpandedCategory] = useState(null);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -19,13 +19,31 @@ export default function Shop_1() {
     }, [sortOrder, selectedCategory]);
 
     const fetchData = async () => {
-        const res = await fetch(`http://localhost:3001/Fruits?_sort=${sortOrder}`);
-        const data = await res.json();
-        const uniqueCategory = [...new Set(data.map(fruit => fruit.category))];
-        setCats(uniqueCategory);
+        // Fetch danh mục
+        const categoriesRes = await fetch('http://localhost:3001/categories');
+        const categoriesData = await categoriesRes.json();
+        
+        // Chuyển đổi cấu trúc đối tượng categoriesData thành mảng
+        const transformedCategories = Object.keys(categoriesData).map(categoryKey => ({
+            name: categoryKey,
+            products: categoriesData[categoryKey]
+        }));
+        
+        setCats(transformedCategories);
 
-        // Lọc dữ liệu dựa trên danh mục đã chọn
-        const filtered = selectedCategory === "" ? data : data.filter(product => product.category === selectedCategory);
+        // Fetch sản phẩm và lọc theo danh mục
+        const res = await fetch(`http://localhost:3001/products?_sort=${sortOrder}`);
+        const data = await res.json();
+        
+        let filtered = [];
+
+        if (selectedCategory) {
+            const selectedCat = transformedCategories.find(cat => cat.name === selectedCategory);
+            filtered = selectedCat ? selectedCat.products : [];
+        } else {
+            filtered = transformedCategories.flatMap(cat => cat.products);
+        }
+        
         setProducts(filtered);
         setFilteredProducts(filtered);
         setTotalProduct(Math.ceil(filtered.length / itemsPerPage));
@@ -36,11 +54,10 @@ export default function Shop_1() {
     };
 
     const handleCategoryClick = (category) => {
-        setSelectedCategory(category);
-    };
+        setExpandedCategory(expandedCategory === category ? null : category);
+      };
 
     useEffect(() => {
-        // Khi lọc hoặc sắp xếp thay đổi, cập nhật trang và số trang
         setTotalProduct(Math.ceil(filteredProducts.length / itemsPerPage));
         setCurrentPage(0);
     }, [filteredProducts]);
@@ -98,17 +115,30 @@ export default function Shop_1() {
                                                             <a href="#"><i className="fas fa-apple-alt me-2"></i>All</a>
                                                         </div>
                                                     </li>
+
                                                     {cats.map((item, index) => (
                                                         <li key={index}>
-                                                            <div className="d-flex justify-content-between fruite-name" onClick={() => handleCategoryClick(item)}>
-                                                                <a href="#"><i className="fas fa-apple-alt me-2"></i>{item}</a>
+                                                            <div 
+                                                                className="d-flex justify-content-between fruite-name"
+                                                                onClick={() => handleCategoryClick(item.name)}
+                                                            >
+                                                                <a href="#"><i className="fas fa-apple-alt me-2"></i>{item.name}</a>
                                                             </div>
-                                                        </li>
-                                                    ))}
+                                                            {expandedCategory === item.name && (
+    <ul className="sub-category">
+      {item.products.map(subCategory => (
+        <li key={subCategory.id}>
+          <a href="#">{subCategory.name}</a>
+        </li>
+      ))}
+    </ul>
+  )}
+                        </li>
+                    ))}
+                                                   
                                                 </ul>
                                             </div>
                                         </div>
-                                        {/* Rest of your filter section */}
                                     </div>
                                 </div>
                                 <div className="col-lg-9">
@@ -124,7 +154,7 @@ export default function Shop_1() {
                                                         <h4>{item.name}</h4>
                                                         <p>{item.description}</p>
                                                         <div className="d-flex justify-content-between flex-lg-wrap">
-                                                            <p className="text-dark fs-5 fw-bold mb-0">${item.price}/ kg</p>
+                                                            <p className="text-dark fs-5 fw-bold mb-0">${item.price}</p>
                                                             <Link to={`http://localhost:3000/shop-detail/${item.id}`} className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> View Detail</Link>
                                                         </div>
                                                     </div>
