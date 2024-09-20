@@ -31,6 +31,8 @@ export default function Shop_1() {
                 }));
                 setCats(transformedCategories);
 
+                
+
                 // Fetch sản phẩm
                 const res = await fetch(`http://localhost:3001/products?_sort=${sortOrder}`);
                 const data = await res.json();
@@ -135,13 +137,13 @@ export default function Shop_1() {
                                 <div className="col-xl-3">
                                     <form className="bg-white ps-3 border-2 py-3 rounded d-flex justify-content-between mb-4" onChange={handleSortChange}>
                                         <label htmlFor="fruits">Showing:</label>
-                                        <select id="fruits" name="fruitlist" className="border-0 form-select-sm bg-light me-3">
-                                            <option value="">SORT BY</option>
-                                            <option value="-price">PRICE (HIGH-LOW)</option>
-                                            <option value="price">PRICE (LOW-HIGH)</option>
-                                            <option value="name">RISE (NAME)</option>
-                                            <option value="-name">DOWN (NAME)</option>
-                                        </select>
+                                    <select id="fruits" name="fruitlist" className="border-0 form-select-sm bg-light me-3">
+                                        <option value="">Default</option>
+                                        <option value="-price">Price (High to Low)</option>
+                                        <option value="price">Price (Low to High)</option>
+                                        <option value="name">Name (A to Z)</option>
+                                        <option value="-name">Name (Z to A)</option>
+                                    </select>
                                     </form>
                                 </div>
                             </div>
