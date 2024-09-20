@@ -5,8 +5,10 @@ export default function Home_6() { //Fact
                 <div class="container">
                     <div class="row g-5 align-items-center">
                         <h1>Categories Products</h1>
-                        <div class="col-md-12 col-lg-6">
-                            <img src="img/homeImage/banner3.jpg" class="img-fluid w-100 h-150 bg-secondary rounded" />
+
+                        <div class="col-md-12 col-lg-6" style={{ position: 'relative' }}  >
+                            <h1 style={{ position: 'absolute', color: '#fff', left: '36%', top: '50%', fontWeight: 'bold' }}>Bedroom</h1>
+                            <img src="https://demxanh.com/media/product/3103_dem_bong_ep_song_hong_sieu_nay_g2__6_.jpg" class="img-fluid w-100 h-150 bg-secondary rounded" />
                         </div>
                         <div class="col-md-12 col-lg-6">
                             <div class="row g-3 py-5">
