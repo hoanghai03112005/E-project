@@ -14,7 +14,7 @@ export default function ShopDetail() {
     }, [test])
 
     var fetchData = async function () {
-        var res = await fetch('http://localhost:3001/Fruits')
+        var res = await fetch('http://localhost:3001/products')
         var data = await res.json()
         setProduct(prevFruit => [...prevFruit, ...data])
         setTest(true)

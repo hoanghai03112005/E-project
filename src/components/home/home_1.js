@@ -5,7 +5,7 @@ export default function Home_1() { // carousel
     var onSearch = (event) => {
         event.preventDefault()
         var keyword = event.target.keyword.value
-        navigate(`/search/${keyword}`, { replace: true });
+        navigate(`/search/?query=${keyword}`, { replace: true });
     }
 
     return (
