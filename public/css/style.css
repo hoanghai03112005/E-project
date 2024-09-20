@@ -13,7 +13,7 @@
      opacity: 1;
  }
 
-<<<<<<< HEAD
+
 .fruite-categorie li {
     margin: 0.5rem 0;
 }
@@ -45,8 +45,7 @@
   .category-item {
     position: relative; /* Để các phần tử con tuyệt đối có thể dựa vào */
   }
-=======
->>>>>>> 04685c7bd9a83457a61d4c3656fe5ef04a1a763a
+
  .back-to-top {
     position: fixed;
     right: 30px;
@@ -534,3 +533,9 @@
 }
 /*** Footer End ***/
 
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }

@@ -14,8 +14,7 @@ import Feedback from './components/feedback/feedback';
 import Contact from './components/contact_us/contact';
 import Shop_2 from './components/shop/shop_2';
 
-
-
+import Professtion from './components/professtion/professtion';
 function App() {
   return (
     <div className="App">
@@ -30,6 +29,7 @@ function App() {
         <Route path='/search/' element={<Search />} />
         <Route path='/feedback' element={<Feedback />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/professtion' element={<Professtion />} />
       </Routes>
       <Footer />
 
