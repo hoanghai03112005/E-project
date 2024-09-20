@@ -15,6 +15,7 @@ import Contact from './components/contact_us/contact';
 import Gallery from './components/gallery/gallery';
 
 import Professtion from './components/professtion/professtion';
+import About from './components/about/about';
 function App() {
   return (
     <div className="App">
@@ -29,8 +30,13 @@ function App() {
         <Route path='/feedback' element={<Feedback />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/professtion' element={<Professtion />} />
+<<<<<<< HEAD
         <Route path='/designers-gallery' element={<Gallery />} />
         
+=======
+        <Route path='/professtion' element={<Professtion />} />
+        <Route path='/about' element={<About />} />
+>>>>>>> dbcc7ee073ca3a61c349e8f3dd7589ef9c1eedea
       </Routes>
       <Footer />
 
