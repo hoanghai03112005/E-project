@@ -126,7 +126,7 @@ export default function Shop_1() {
                         <div className="col-lg-12">
                             <div className="row g-4">
                                 <div className="col-xl-3">
-                                    <form className="input-group w-100 mx-auto d-flex" onSubmit={event => {
+                                    <form className="input-group w-100 mx-auto d-flex py-6" onSubmit={event => {
                                         event.preventDefault();
                                         const keyword = event.target.keyword.value;
                                         localStorage.setItem('searchKeyword', keyword);
@@ -137,7 +137,7 @@ export default function Shop_1() {
                                     </form>
                                 </div>
                                 <div className="col-6"></div>
-                                <div className="col-xl-3">
+                                <div className="col-xl-3 py-6">
                                     <form className="bg-white ps-3 border-2 py-3 rounded d-flex justify-content-between mb-4" onChange={handleSortChange}>
                                         <label htmlFor="fruits">Showing:</label>
                                         <select id="fruits" name="fruitlist" className="border-0 form-select-sm bg-light me-3">
@@ -208,26 +208,28 @@ export default function Shop_1() {
                                                 </div>
                                             </div>
                                         ))}
-                                        <nav aria-label="Page navigation example">
-                                            <ReactPaginate
-                                                breakLabel="..."
-                                                nextLabel=">"
-                                                onPageChange={handlePageClick}
-                                                pageRangeDisplayed={5}
-                                                pageCount={totalProduct}
-                                                previousLabel="<"
-                                                pageClassName="page-item"
-                                                pageLinkClassName="page-link bg-dark border-white text-white"
-                                                previousClassName="page-item"
-                                                previousLinkClassName="page-link bg-dark border-white text-white"
-                                                nextClassName="page-item"
-                                                nextLinkClassName="page-link bg-dark border-white text-white"
-                                                breakClassName="page-item"
-                                                breakLinkClassName="page-link"
-                                                containerClassName="pagination"
-                                                activeClassName="active"
-                                            />
-                                        </nav>
+                                        <div className="d-flex justify-content-center">
+                                            <nav aria-label="Page navigation example">
+                                                <ReactPaginate
+                                                    breakLabel="..."
+                                                    nextLabel=">"
+                                                    onPageChange={handlePageClick}
+                                                    pageRangeDisplayed={5}
+                                                    pageCount={totalProduct}
+                                                    previousLabel="<"
+                                                    pageClassName="page-item"
+                                                    pageLinkClassName="page-link bg-dark border-white text-white"
+                                                    previousClassName="page-item"
+                                                    previousLinkClassName="page-link bg-dark border-white text-white"
+                                                    nextClassName="page-item"
+                                                    nextLinkClassName="page-link bg-dark border-white text-white"
+                                                    breakClassName="page-item"
+                                                    breakLinkClassName="page-link bg-dark border-white text-white"
+                                                    containerClassName="pagination"
+                                                    activeClassName="active"
+                                                />
+                                            </nav>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

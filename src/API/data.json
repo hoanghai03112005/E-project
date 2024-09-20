@@ -324,7 +324,7 @@
         "id": 27,
         "name": "Adjustable Recliner Chair",
         "description": "An adjustable recliner chair that offers customizable comfort. Ideal for relaxing after a long day.",
-        "categoryId": 1,
+        "categoryId": 2,
         "price": 480,
         "img": "https://m.media-amazon.com/images/I/512e65EPX6L._AC_US1000_.jpg"
       },
@@ -418,307 +418,152 @@
       },
       {
         "id": 39,
-        "name": "Luxurious Leather Sofa",
-        "description": "A luxurious leather sofa that provides both style and comfort. Perfect for your living room, with a sleek design and plush seating.",
-        "categoryId": 1,
-        "price": 1200,
-        "img": "https://m.media-amazon.com/images/I/81EaYnkfDhL._AC_UF894,1000_QL80_.jpg"
+        "name": "Toni's side table",
+        "description": "A minimalist floor table with a sleek design. Provides soft and adjustable lighting.",
+        "categoryId": 3,
+        "price": 150,
+        "img": "img/product/table1.jpg"
       },
       {
         "id": 40,
-        "name": "Modern Recliner Chair",
-        "description": "A modern recliner chair with adjustable settings for maximum relaxation. Ideal for reading or watching TV.",
-        "categoryId": 2,
-        "price": 450,
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTk8MUP7I06b9OfJIRUaGwstWLqPwK0ISi9w&s"
-      },
+        "name": "Bali 518 Leather 3-seater Combo Sofa",
+        "description": "Bali 518 3-seater leather combo sofa in trendy brick orange color is your wisest choice for a warmer, softer living room space.",
+        "categoryId": 1,
+        "price": 2000,
+        "img": "img/product/sofa1.jpg"
+      }
+      ,
       {
         "id": 41,
-        "name": "Wooden Dining Table",
-        "description": "A sturdy wooden dining table that adds elegance to your dining area. Seats up to 6 people comfortably.",
-        "categoryId": 3,
-        "price": 700,
-        "img": "https://www.stillandbloom.co.uk/cdn/shop/files/Andersson_Dining_table_260cm.jpg?v=1721318320"
-      },
+        "name": "Hangar display shelves",
+        "description": "This is a leather sofa model with a beech metalic frame along with super elastic mousse.",
+        "categoryId": 5,
+        "price": 1900,
+        "img": "img/product/case1.jpg"
+      }
+      ,
       {
         "id": 42,
-        "name": "Contemporary Bed Frame",
-        "description": "A contemporary bed frame with a minimalist design. Provides excellent support and fits well with various decor styles.",
-        "categoryId": 4,
-        "price": 600,
-        "img": "https://cdn.thewirecutter.com/wp-content/media/2022/01/bedframes-2048px-floyd-1.jpg?auto=webp&quality=75&width=1024"
-      },
+        "name": "Hung King 3-seater Sofa + Pillow VACT3231",
+        "description": "This is a leather sofa model with a beech metalic frame along with super elastic mousse.",
+        "categoryId": 1,
+        "price": 960,
+        "img": "img/product/sofa2.jpg"
+      }
+      ,
       {
         "id": 43,
-        "name": "Space-Saving Storage Cabinet",
-        "description": "A space-saving storage cabinet perfect for organizing your living space. Includes multiple shelves and compartments.",
-        "categoryId": 5,
-        "price": 350,
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeyN3AjzKArqhb4pHeTeGyGRmuXhvPowcIgw&s"
-      },
+        "name": "Jadora 2.5 seater fabric sofa VACT4029/VACT4709",
+        "description": "This is a leather sofa model with a beech metalic frame along with super elastic mousse.",
+        "categoryId": 1,
+        "price": 1050,
+        "img": "img/product/sofa3.jpg"
+      }
+      ,
       {
         "id": 44,
-        "name": "Elegant Kitchen Cabinet",
-        "description": "An elegant kitchen cabinet with ample storage space. Ideal for keeping your kitchen organized and stylish.",
-        "categoryId": 6,
-        "price": 800,
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0iCeXW4VPNt3-9P7FZDjMCRRlu0MA7j4aAA&s"
-      },
+        "name": "Coastal 1 seater sofa green fabric",
+        "description": "This is a leather sofa model with a beech metalic frame along with super elastic mousse.",
+        "categoryId": 1,
+        "price": 1050,
+        "img": "img/product/sofa4.jpg"
+      }
+      ,
       {
         "id": 45,
-        "name": "Granite Counter Top",
-        "description": "A durable granite counter top that adds a touch of luxury to your kitchen. Resistant to scratches and stains.",
-        "categoryId": 7,
-        "price": 900,
-        "img": "https://firenzastone.com/wp-content/uploads/2022/02/Granite-Countertops-1.jpg"
-      },
+        "name": "Armchair Doulton vintage",
+        "description": "This is a leather sofa model with a beech metalic frame along with super elastic mousse.",
+        "categoryId": 2,
+        "price": 1050,
+        "img": "img/product/chair2.jpg"
+      }
+      ,
       {
         "id": 46,
-        "name": "High-Quality Sink and Faucet Set",
-        "description": "A high-quality sink and faucet set designed for durability and ease of use. Complements modern kitchen designs.",
-        "categoryId": 8,
-        "price": 250,
-        "img": "https://www.kraususa.com/media/catalog/category/faucet-sets.jpg"
-      },
+        "name": "Coastal green bed 1m6",
+        "description": "This is a leather sofa model with a beech metalic frame along with super elastic mousse.",
+        "categoryId": 4,
+        "price": 1050,
+        "img": "img/product/bed1.jpg"
+      }
+      ,
       {
         "id": 47,
-        "name": "Stylish Kitchen Island",
-        "description": "A stylish kitchen island with additional storage and counter space. Ideal for cooking and meal preparation.",
-        "categoryId": 9,
-        "price": 550,
-        "img": "https://hips.hearstapps.com/hmg-prod/images/kitchen-island-ideas-hbx080121laurenliess-010-1666383609.jpg"
-      },
+        "name": "Cabiner Olive",
+        "description": "This is a leather sofa model with a beech metalic frame along with super elastic mousse.",
+        "categoryId": 6,
+        "price": 2500,
+        "img": "img/product/cabinet1.jpg"
+      }
+      ,
       {
         "id": 48,
-        "name": "Decorative Backsplash Tiles",
-        "description": "Decorative backsplash tiles that enhance the look of your kitchen or bathroom. Easy to install and clean.",
-        "categoryId": 10,
-        "price": 150,
-        "img": "https://hips.hearstapps.com/hmg-prod/images/hbx070123kitchen-meta-006-resized-66b0dbbdb65ab.jpg?crop=0.896xw:0.598xh;0,0.0642xh&resize=1120:*"
-      },
+        "name": "Sink black Towers",
+        "description": "This is a leather sofa model with a beech metalic frame along with super elastic mousse.",
+        "categoryId": 8,
+        "price": 6000,
+        "img": "img/product/sink1.jpg"
+      }
+      ,
       {
         "id": 49,
-        "name": "Modern Ceiling Light Fixture",
-        "description": "A modern ceiling light fixture that provides ample lighting and adds a contemporary touch to your room.",
-        "categoryId": 11,
-        "price": 180,
-        "img": "https://m.media-amazon.com/images/I/71JQfbfL7BL.jpg"
-      },
+        "name": "Porto M2 8-seat dining table",
+        "description": "This is a leather sofa model with a beech metalic frame along with super elastic mousse.",
+        "categoryId": 9,
+        "price": 6000,
+        "img": "img/product/table2.jpg"
+      }
+      ,
       {
         "id": 50,
-        "name": "Elegant Wall Light",
-        "description": "An elegant wall light that creates a warm ambiance. Perfect for enhancing the atmosphere of any room.",
-        "categoryId": 12,
-        "price": 130,
-        "img": "https://m.media-amazon.com/images/I/71NQ3M8UEXL.jpg"
+        "name": "Lowes modern kitchen backsplashes",
+        "description": "This is a leather sofa model with a beech metalic frame along with super elastic mousse.",
+        "categoryId": 10,
+        "price": 11500,
+        "img": "img/product/back1.jpg"
       },
       {
         "id": 51,
-        "name": "Contemporary Floor Lamp",
-        "description": "A contemporary floor lamp with adjustable brightness. Great for reading or adding a stylish touch to your space.",
-        "categoryId": 13,
-        "price": 200,
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0n_094-i6cSBHm2UQZmHVNjKfsunmd_tOUA&s"
-      },
-      {
-        "id": 52,
-        "name": "Classic Table Lamp",
-        "description": "A classic table lamp that provides a warm glow. Ideal for bedside tables or desks.",
-        "categoryId": 14,
-        "price": 80,
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvHGXjixLBO5C7WwmwxwHK1IBL9hSijaDpnQ&s"
-      },
-      {
-        "id": 53,
-        "name": "Outdoor LED Lighting",
-        "description": "Outdoor LED lighting that brightens up your garden or patio. Weather-resistant and energy-efficient.",
-        "categoryId": 15,
-        "price": 100,
-        "img": "https://www.magiklights.com/blog/wp-content/uploads/2023/07/LED-Lighting-Ideas-for-Gardens-and-Landscapes.jpg"
-      },
-      {
-        "id": 54,
-        "name": "Soft Area Rug",
-        "description": "A soft area rug that adds comfort and style to your living space. Available in various sizes and colors.",
-        "categoryId": 16,
-        "price": 220,
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeb9Mnpep4rUminAJA3NgxRO3-c30vIFxahA&s"
-      },
-      {
-        "id": 55,
-        "name": "Elegant Curtain Set",
-        "description": "An elegant curtain set that adds a touch of sophistication to any room. Made from high-quality fabric.",
-        "categoryId": 17,
-        "price": 150,
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuK92PQiRyYv2tkw50WMV_gJN5RHIfG70ylA&s"
-      },
-      {
-        "id": 56,
-        "name": "Artistic Wall Mirror",
-        "description": "An artistic wall mirror that enhances the visual appeal of your space. Features a unique design.",
-        "categoryId": 18,
-        "price": 300,
-        "img": "https://m.media-amazon.com/images/I/71KMPbisY9L.jpg"
-      },
-      {
-        "id": 57,
-        "name": "Comfortable Throw Pillow",
-        "description": "A comfortable throw pillow that adds color and comfort to your sofa or bed. Made from soft fabric.",
-        "categoryId": 19,
-        "price": 45,
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsPmHVeZ5nJdo106T4JveHqlawD0zZZEebmg&s"
-      },
-      {
-        "id": 58,
-        "name": "Decorative Vase Set",
-        "description": "A decorative vase set perfect for adding a touch of elegance to your home decor. Ideal for flowers or as a standalone piece.",
-        "categoryId": 20,
-        "price": 70,
-        "img": "https://shop.ninacampbell.com/cdn/shop/files/NymphVases1.jpg?v=1717079852"
-      },
-      {
-        "id": 59,
-        "name": "Stylish Vanity Cabinet",
-        "description": "A stylish vanity cabinet that provides storage and enhances your bathroom decor. Features a sleek design.",
-        "categoryId": 21,
-        "price": 400,
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlpGXJb6kSwvMTIa9abdNBuo3XASjSp93G0A&s"
-      },
-      {
-        "id": 60,
-        "name": "Modern Shower Unit",
-        "description": "A modern shower unit with advanced features. Provides a relaxing and enjoyable shower experience.",
-        "categoryId": 22,
-        "price": 600,
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN7pCByX2M5KKefD3d4sL2G_2qyhLvKfW-dQ&s"
-      },
-      {
-        "id": 61,
-        "name": "Contemporary Toilet Design",
-        "description": "A contemporary toilet design that combines functionality with style. Easy to install and maintain.",
-        "categoryId": 23,
-        "price": 250,
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzL_pif1Ddpph3MzVhxXUPlrjClQ1opdVIBg&s"
-      },
-      {
-        "id": 62,
-        "name": "Elegant Bathroom Sink",
-        "description": "An elegant bathroom sink that adds sophistication to your bathroom. Made from high-quality materials.",
-        "categoryId": 24,
-        "price": 120,
-        "img": "https://cdn.prod.website-files.com/6296aec5884dc4c8a90970a6/62defba1898f78d8a275edfb_Kallista%20Bathroom%20Sink%2024.jpg"
-      },
-      {
-        "id": 63,
-        "name": "Classic Medicine Cabinet",
-        "description": "A classic medicine cabinet that offers ample storage for your bathroom essentials. Features a timeless design.",
-        "categoryId": 25,
-        "price": 90,
-        "img": "https://m.media-amazon.com/images/I/51cnOqomYML._AC_.jpg"
-      },
-      {
-        "id": 64,
-        "name": "Rustic Dining Table",
-        "description": "A rustic dining table with a vintage charm. Perfect for creating a warm and inviting dining space.",
-        "categoryId": 1,
-        "price": 750,
-        "img": "https://images-cdn.ubuy.co.in/65c65ff1eefeb91cb623f2f1-churanty-wood-farmhouse-dining-table-set.jpg"
-      },
-      {
-        "id": 65,
-        "name": "Adjustable Recliner Chair",
-        "description": "An adjustable recliner chair that offers customizable comfort. Ideal for relaxing after a long day.",
-        "categoryId": 1,
-        "price": 480,
-        "img": "https://m.media-amazon.com/images/I/512e65EPX6L._AC_US1000_.jpg"
-      },
-      {
-        "id": 66,
-        "name": "Round Glass Table",
-        "description": "A round glass table with a modern design. Ideal for small dining areas or as a coffee table.",
-        "categoryId": 3,
-        "price": 320,
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZfvo_JrpTc26ZxuvhFPWKJfu3Vxta4lXFMA&s"
-      },
-      {
-        "id": 67,
-        "name": "Luxury Bed Frame",
-        "description": "A luxury bed frame with an elegant design. Provides a stylish and comfortable sleep experience.",
-        "categoryId": 4,
-        "price": 850,
-        "img": "https://www.bedroomking.co.uk/cdn/shop/products/Luxury-Tall-Wingback.jpg?v=1667899872"
-      },
-      {
-        "id": 68,
-        "name": "Compact Storage Shelf",
-        "description": "A compact storage shelf perfect for organizing books or decorative items. Fits well in small spaces.",
-        "categoryId": 5,
-        "price": 220,
-        "img": "https://m.media-amazon.com/images/I/718Qap2ULXL.jpg"
-      },
-      {
-        "id": 69,
-        "name": "Modern Pantry Cabinet",
-        "description": "A modern pantry cabinet that provides ample storage for your kitchen essentials. Features a sleek design.",
-        "categoryId": 6,
-        "price": 750,
-        "img": "https://cdn.trendir.com/wp-content/uploads/2016/10/Closet-pantry-900x1187.jpg"
-      },
-      {
-        "id": 70,
-        "name": "Quartz Counter Top",
-        "description": "A durable quartz counter top that adds a touch of luxury to your kitchen. Easy to maintain and clean.",
-        "categoryId": 7,
-        "price": 950,
-        "img": "https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/featured-image-quartz-counter.jpeg.jpg"
-      },
-      {
-        "id": 71,
-        "name": "Elegant Faucet Set",
-        "description": "An elegant faucet set that enhances the look of your kitchen. Designed for both style and functionality.",
-        "categoryId": 8,
-        "price": 275,
-        "img": "https://cdn4.volusion.store/xytxg-mzvwg/v/vspfiles/photos/BSS-1007-2.jpg?v-cache=1718807233"
-      },
-      {
-        "id": 72,
-        "name": "Versatile Kitchen Island",
-        "description": "A versatile kitchen island with additional workspace and storage. Ideal for cooking and meal preparation.",
-        "categoryId": 9,
-        "price": 600,
-        "img": "https://www.thekitchenpartners.co.uk/wp-content/uploads/2023/11/Hanna-1-scaled.jpg"
-      },
-      {
-        "id": 73,
-        "name": "Designer Backsplash Tiles",
-        "description": "Designer backsplash tiles that add a stylish touch to your kitchen or bathroom. Easy to install.",
-        "categoryId": 10,
-        "price": 160,
-        "img": "https://jumanji.livspace-cdn.com/magazine/wp-content/uploads/sites/2/2020/08/04233312/Kitchen-Backsplash-on-a-Budget-Tiles.jpg"
-      },
-      {
-        "id": 74,
-        "name": "LED Ceiling Light",
-        "description": "A modern LED ceiling light that provides bright and energy-efficient lighting for any room.",
+        "name": "Ceiling Light/Night Fixture",
+        "description": "A modern ceiling light fixture that provides ample lighting and adds a contemporary touch to your room.",
         "categoryId": 11,
-        "price": 190,
+        "price": 250,
         "img": "https://m.media-amazon.com/images/I/71JQfbfL7BL.jpg"
       },
       {
-        "id": 75,
-        "name": "Sculptural Wall Light",
-        "description": "A sculptural wall light that creates a striking visual effect. Ideal for contemporary interiors.",
-        "categoryId": 12,
-        "price": 140,
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4LrGnQjIIlNN-QfeJ_gLVvbFr1cx7ArA41Q&s"
-      },
+        "id": 52,
+        "name": "Figure Table Lamp",
+        "description": "A modern ceiling light fixture that provides ample lighting and adds a contemporary touch to your room.",
+        "categoryId": 14,
+        "price": 250,
+        "img": "img/product/lamp1.jpg"
+      }
+      ,
       {
-        "id": 76,
-        "name": "Minimalist Floor Lamp",
-        "description": "A minimalist floor lamp with a sleek design. Provides soft and adjustable lighting.",
-        "categoryId": 13,
-        "price": 210,
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0E46KWnFjeItWhlREyeFK7lWjW9kNUM4O0w&s"
+        "id": 53,
+        "name": "Blue BBB Table Elegant Lamp",
+        "description": "A modern ceiling light fixture that provides ample lighting and adds a contemporary touch to your room.",
+        "categoryId": 14,
+        "price": 325,
+        "img": "img/product/lamp2.jpg"
+      }
+      ,
+      {
+        "id": 54,
+        "name": "Direct Bruial Light Poles",
+        "description": "A modern ceiling light fixture that provides ample lighting and adds a contemporary touch to your room.",
+        "categoryId": 15,
+        "price": 7800,
+        "img": "img/product/outdoor1.jpg"
+      }
+      ,
+      {
+        "id": 55,
+        "name": "Patect Mini-Paradaise Light",
+        "description": "A modern ceiling light fixture that provides ample lighting and adds a contemporary touch to your room.",
+        "categoryId": 15,
+        "price": 8100,
+        "img": "img/product/outdoor1.jpg"
       }
     ],
     
@@ -861,22 +706,21 @@
       },
       {
         "id": 7,
-        "name": "Scandinavian Dining Room",
-        "category": "Dining Room",
+        "name": "Balian Living Room",
+        "category": "Living Room",
         "price": 18000,
-        "style": "Scandinavian",
-        "description": "A bright dining room with minimalist furniture and natural materials.",
-        "img": "https://mojoboutique.com/cdn/shop/articles/scandinavian_dining_table_ideas_1344x.jpg?v=1710009231",
+        "style": "Balian",
+        "description": "Elegant style for living room from Bali sofa.",
+        "img": "img/designstyler/living2.jpg",
         "products": [
           {
-            "id": 9,
-            "name": "Dining Table",
-            "price": 900
+            "id": 41
           },
           {
-            "id": 10,
-            "name": "Chesterfield Chairs",
-            "price": 500
+            "id": 40
+          },
+          {
+            "id": 39
           }
         ],
         "totalCost": 1400
