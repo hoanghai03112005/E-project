@@ -63,28 +63,11 @@ export default function Gallery() {
                         <div className="col-lg-12">
                             <div className="row g-4">
                                 <div className="col-xl-3">
-                                    <form className="input-group w-100 mx-auto d-flex" onSubmit={event => {
-                                        event.preventDefault();
-                                        const keyword = event.target.keyword.value;
-                                        localStorage.setItem('searchKeyword', keyword);
-                                        navigate(`/search?query=${encodeURIComponent(keyword)}`, { replace: true });
-                                    }}>
-                                        <input type="text" className="form-control border-2 p-2 " placeholder="search" aria-describedby="search-icon-1" name="keyword" />
-                                        <button id="search-icon-1" className="input-group-text p-3 bg-dark"><i className="fa fa-search text-white"></i></button>
-                                    </form>
+                                    
                                 </div>
                                 <div className="col-6"></div>
                                 <div className="col-xl-3">
-                                    <form className="bg-white ps-3 border-2 py-3 rounded d-flex justify-content-between mb-4" onChange={handleSortChange}>
-                                        <label htmlFor="fruits">Showing:</label>
-                                        <select id="fruits" name="fruitlist" className="border-0 form-select-sm bg-light me-3">
-                                            <option value="">SORT BY</option>
-                                            <option value="-price">PRICE (HIGH-LOW)</option>
-                                            <option value="price">PRICE (LOW-HIGH)</option>
-                                            <option value="name">RISE (NAME)</option>
-                                            <option value="-name">DOWN (NAME)</option>
-                                        </select>
-                                    </form>
+                                    
                                 </div>
                             </div>
                             <div className="row g-4">
@@ -129,7 +112,7 @@ export default function Gallery() {
                                                         <p className="text-truncate">{item.description}</p>
                                                         <div className="d-flex justify-content-between flex-lg-wrap">
                                                             <p className="text-dark fs-5 fw-bold mb-0">${item.price}</p>
-                                                            <Link to={`http://localhost:3000/shop-detail/${item.id}`} className="btn border border-secondary bg-dark rounded-pill px-3 text-white"><i className="fa fa-shopping-bag me-2 text-white"></i> View Detail</Link>
+                                                            <Link to={`http://localhost:3000//designers-gallery/products/`} className="btn border border-secondary bg-dark rounded-pill px-3 text-white"><i className="fa fa-shopping-bag me-2 text-white"></i> View Detail</Link>
                                                         </div>
                                                     </div>
                                                 </div>

@@ -114,6 +114,10 @@ export default function Shop_1() {
         setCurrentPage(selected);
     };
 
+    const generateRandomDiscount = () => {
+        return Math.floor(Math.random() * 100) + 1; // Giá trị từ 1 đến 100
+    };
+
     return (
         <>
             <div className="container-fluid fruite py-5">
@@ -192,7 +196,7 @@ export default function Shop_1() {
                                                     <div className="fruite-img">
                                                         <Link to={`http://localhost:3000/shop-detail/${item.id}`}><img src={item.img} className="img w-100 rounded-top" alt="" /></Link>
                                                     </div>
-                                                    <div className="text-white bg-danger px-3 py-1 rounded position-absolute" style={{ top: '10px', left: '10px' }}>Sale 15%</div>
+                                                    <div className="text-white bg-danger px-3 py-1 rounded position-absolute" style={{ top: '10px', left: '10px' }}>Sale {generateRandomDiscount()}%</div>
                                                     <div className="p-4 border border-secondary border-top-0 rounded-bottom">
                                                         <h4>{item.name}</h4>
                                                         <p className="text-truncate">{item.description}</p>

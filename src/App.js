@@ -30,6 +30,7 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/professtion' element={<Professtion />} />
         <Route path='/designers-gallery' element={<Gallery />} />
+        
       </Routes>
       <Footer />
 
