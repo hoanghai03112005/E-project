@@ -33,7 +33,6 @@ export default function ShopDetail() {
                     <div class="row g-4 mb-5">
                         <div class="col-lg-8 col-xl-9">
                             <div class="row g-4">
-
                                 {
                                     selectID && (
                                         <>
@@ -45,33 +44,37 @@ export default function ShopDetail() {
                                                 </div>
                                             </div>
 
-                                            <div class="col-lg-6" style={{ marginTop: '100px' }}>
-                                                <h4 class="fw-bold mb-3" style={{ marginLeft: '-380px' }}>{selectID.name}</h4>
-
-                                                <h5 class="fw-bold mb-3" style={{ marginLeft: '-420px' }}>${selectID.price}</h5>
-                                                <div class="d-flex mb-4">
-                                                    <i class="fa fa-star text-secondary"></i>
-                                                    <i class="fa fa-star text-secondary"></i>
-                                                    <i class="fa fa-star text-secondary"></i>
-                                                    <i class="fa fa-star text-secondary"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </div>
-                                                <p class="mb-4" style={{ textAlign: 'left' }}>{selectID.description}</p>
-
-                                                <div class="input-group quantity mb-5" style={{ width: '100px' }}>
-                                                    <div class="input-group-btn">
-                                                        <button class="btn btn-sm btn-minus rounded-circle bg-light border" >
-                                                            <i class="fa fa-minus"></i>
-                                                        </button>
-                                                    </div>
-                                                    <input type="text" class="form-control form-control-sm text-center border-0" value="1" />
-                                                    <div class="input-group-btn">
-                                                        <button class="btn btn-sm btn-plus rounded-circle bg-light border">
-                                                            <i class="fa fa-plus"></i>
-                                                        </button>
+                                            <div class="col-lg-6 py-6" style={{ marginTop: '100px' }}>
+                                                <h4 class="fw-bold mb-3">{selectID.name}</h4>
+                                                <p class="mb-4" style={{ textAlign: 'center' }}>{selectID.description}</p>
+                                                <div className="d-flex justify-content-between py-6" >
+                                                    <h5 class="fw-bold mb-3">${selectID.price}</h5>
+                                                    <div class="d-flex mb-4 justify-content-center">
+                                                        <i class="fa fa-star text-secondary"></i>
+                                                        <i class="fa fa-star text-secondary"></i>
+                                                        <i class="fa fa-star text-secondary"></i>
+                                                        <i class="fa fa-star text-secondary"></i>
+                                                        <i class="fa fa-star"></i>
                                                     </div>
                                                 </div>
-                                                <a href="#" class="btn border border-secondary rounded-pill px-4 py-2 mb-4 text-primary" style={{ marginLeft: '-310px' }}><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+
+                                                <div className="d-flex justify-content-between">
+                                                    <div class="input-group quantity mb-5" style={{ width: '100px' }}>
+                                                        <div class="input-group-btn">
+                                                            <button class="btn btn-sm btn-minus rounded-circle bg-light border" >
+                                                                <i class="fa fa-minus text-dark"></i>
+                                                            </button>
+                                                        </div>
+                                                        <input type="text" class="form-control form-control-sm text-center border-0" value="1" />
+                                                        <div class="input-group-btn">
+                                                            <button class="btn btn-sm btn-plus rounded-circle bg-light border">
+                                                                <i class="fa fa-plus text-dark"></i>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <a href="#" class="btn btn-dark border border-secondary rounded-pill mb-5 text-white" style={{ marginLeft: '-310px' }}><i class="fa fa-shopping-bag me-2 text-white"></i> Add to cart</a>
+                                                </div>
+
                                             </div>
                                         </>
                                     )
