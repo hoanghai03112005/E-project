@@ -103,7 +103,7 @@ export default function Gallery() {
                                             <div className="col-md-4" key={item.id}>
                                                 <div className="rounded position-relative fruite-item">
                                                     <div className="fruite-img">
-                                                        <Link to={`http://localhost:3000/shop-detail/${item.id}`}><img src={item.img} className="img w-100 rounded-top" alt="" /></Link>
+                                                        <Link to={`http://localhost:3000/design-detail/${item.id}`}><img src={item.img} className="img w-100 rounded-top" alt="" /></Link>
                                                     </div>
                                                     <div className="text-white bg-danger px-3 py-1 rounded position-absolute" style={{ top: '10px', left: '10px' }}>Sale 15%</div>
                                                     <div className="p-4 border border-secondary border-top-0 rounded-bottom">
@@ -111,7 +111,7 @@ export default function Gallery() {
                                                         <p className="text-truncate">{item.description}</p>
                                                         <div className="d-flex justify-content-between flex-lg-wrap">
                                                             <p className="text-dark fs-5 fw-bold mb-0">${item.price}</p>
-                                                            <Link to={`http://localhost:3000//designers-gallery/products/`} className="btn border border-secondary bg-dark rounded-pill px-3 text-white"><i className="fa fa-shopping-bag me-2 text-white"></i> View Detail</Link>
+                                                            <Link to={`http://localhost:3000/design-detail/${item.id}`} className="btn border border-secondary bg-dark rounded-pill px-3 text-white"><i className="fa fa-shopping-bag me-2 text-white"></i> View Detail</Link>
                                                         </div>
                                                     </div>
                                                 </div>

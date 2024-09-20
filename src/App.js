@@ -13,7 +13,7 @@ import Feedback from './components/feedback/feedback';
 
 import Contact from './components/contact_us/contact';
 import Gallery from './components/gallery/gallery';
-
+import DesignDetail from './components/designDetail';
 import Professtion from './components/professtion/professtion';
 import About from './components/about/about';
 function App() {
@@ -32,7 +32,7 @@ function App() {
         <Route path='/professtion' element={<Professtion />} />
 
         <Route path='/designers-gallery' element={<Gallery />} />
-        
+        <Route path='/design-detail/:id' element={<DesignDetail />} />
 
         <Route path='/professtion' element={<Professtion />} />
         <Route path='/about' element={<About />} />
