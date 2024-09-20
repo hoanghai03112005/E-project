@@ -117,9 +117,8 @@ export default function Shop_1() {
     return (
         <>
             <div className="container-fluid fruite py-5">
-                <div className="container py-5">
-                    <h1 className="mb-4">Fresh fruits shop</h1>
-                    <div className="row g-4">
+                <div className="container py-6">
+                    <div className="row g-4 py-6">
                         <div className="col-lg-12">
                             <div className="row g-4">
                                 <div className="col-xl-3">
@@ -129,8 +128,8 @@ export default function Shop_1() {
                                         localStorage.setItem('searchKeyword', keyword);
                                         navigate(`/search?query=${encodeURIComponent(keyword)}`, { replace: true });
                                     }}>
-                                        <input type="text" className="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1" name="keyword" />
-                                        <button id="search-icon-1" className="input-group-text p-3"><i className="fa fa-search"></i></button>
+                                        <input type="text" className="form-control" placeholder="Search" aria-describedby="search-icon-1" name="keyword" />
+                                        <button id="search-icon-1" className="btn-dark input-group-text p-3 text-white "><i className="fa fa-search"></i></button>
                                     </form>
                                 </div>
                                 <div className="col-6"></div>
