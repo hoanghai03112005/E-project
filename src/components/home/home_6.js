@@ -7,9 +7,6 @@ export default function Home_6() { //Fact
                         <h1>Categories Products</h1>
                         <div class="col-md-12 col-lg-6">
                             <img src="img/homeImage/banner1.jpg" class="img-fluid w-100 h-150 bg-secondary rounded" />
-                            <div class="centered text-danger">Centered
-
-                            </div>
                         </div>
                         <div class="col-md-12 col-lg-6">
                             <div class="row g-3 py-5">

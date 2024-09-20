@@ -143,9 +143,9 @@ export default function ShopDetail() {
                                         </div>
                                         <div class="tab-pane" id="nav-mission" role="tabpanel" aria-labelledby="nav-mission-tab">
                                             <div class="d-flex">
-                                                <img src="img/avatar.jpg" class="img-fluid rounded-circle p-3" style={{ width: '100px', height: '100px' }} alt="" />
+                                                <img src="/img/avatar.jpg" class="img-fluid rounded-circle p-3" style={{ width: '100px', height: '100px' }} alt="" />
                                                 <div class="">
-                                                    <p class="mb-2" style={{fontSize: '14px'}}>April 12, 2024</p>
+                                                    <p class="mb-2" style={{ fontSize: '14px' }}>April 12, 2024</p>
                                                     <div class="d-flex justify-content-between">
                                                         <h5>Jason Smith</h5>
                                                         <div class="d-flex mb-3">
@@ -161,9 +161,9 @@ export default function ShopDetail() {
                                                 </div>
                                             </div>
                                             <div class="d-flex">
-                                                <img src="img/avatar.jpg" class="img-fluid rounded-circle p-3" style={{ width: '100px', height: '100px' }} alt="" />
+                                                <img src="/img/avatar.jpg" class="img-fluid rounded-circle p-3" style={{ width: '100px', height: '100px' }} alt="" />
                                                 <div class="">
-                                                    <p class="mb-2" style={{fontSize: '14px'}}>April 12, 2024</p>
+                                                    <p class="mb-2" style={{ fontSize: '14px' }}>June 24, 2024</p>
                                                     <div class="d-flex justify-content-between">
                                                         <h5>Sam Peters</h5>
                                                         <div class="d-flex mb-3">
@@ -192,24 +192,24 @@ export default function ShopDetail() {
                                     <div class="row g-4">
                                         <div class="col-lg-6">
                                             <div class="border-bottom rounded">
-                                                <input type="text" class="form-control border-0 me-4" placeholder="Yur Name *" />
+                                                <input type="text" class="form-control border-1 me-4" placeholder="Your Name *" />
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="border-bottom rounded">
-                                                <input type="email" class="form-control border-0" placeholder="Your Email *" />
+                                                <input type="email" class="form-control border-1" placeholder="Your Email *" />
                                             </div>
                                         </div>
                                         <div class="col-lg-12">
                                             <div class="border-bottom rounded my-4">
-                                                <textarea name="" id="" class="form-control border-0" cols="30" rows="8" placeholder="Your Review *" spellcheck="false"></textarea>
+                                                <textarea name="" id="" class="form-control border-1" cols="30" rows="8" placeholder="Your Review *" spellcheck="false"></textarea>
                                             </div>
                                         </div>
                                         <div class="col-lg-12">
                                             <div class="d-flex justify-content-between py-3 mb-5">
                                                 <div class="d-flex align-items-center">
                                                     <p class="mb-0 me-3">Please rate:</p>
-                                                    <div class="d-flex align-items-center" style={{fontSize: '12px'}}>
+                                                    <div class="d-flex align-items-center" style={{ fontSize: '12px' }}>
                                                         <i class="fa fa-star text-muted"></i>
                                                         <i class="fa fa-star"></i>
                                                         <i class="fa fa-star"></i>
@@ -217,7 +217,7 @@ export default function ShopDetail() {
                                                         <i class="fa fa-star"></i>
                                                     </div>
                                                 </div>
-                                                <a href="#" class="btn border border-secondary text-primary rounded-pill px-4 py-3"> Post Comment</a>
+                                                <a href="#" class="btn btn-dark border border-secondary text-white rounded-pill px-4 py-3"> Post Comment</a>
                                             </div>
                                         </div>
                                     </div>
@@ -227,7 +227,7 @@ export default function ShopDetail() {
                         <div class="col-lg-4 col-xl-3">
                             <div class="row g-4 fruite">
                                 <div class="col-lg-12">
-                                    
+
                                     <div class="mb-4">
                                         <h4>Categories</h4>
                                         <ul class="list-unstyled fruite-categorie">
@@ -237,151 +237,14 @@ export default function ShopDetail() {
                                                     <span>(3)</span>
                                                 </div>
                                             </li>
-                                            <li>
-                                                <div class="d-flex justify-content-between fruite-name">
-                                                    <a href="#"><i class="fas fa-apple-alt me-2"></i>Oranges</a>
-                                                    <span>(5)</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="d-flex justify-content-between fruite-name">
-                                                    <a href="#"><i class="fas fa-apple-alt me-2"></i>Strawbery</a>
-                                                    <span>(2)</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="d-flex justify-content-between fruite-name">
-                                                    <a href="#"><i class="fas fa-apple-alt me-2"></i>Banana</a>
-                                                    <span>(8)</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="d-flex justify-content-between fruite-name">
-                                                    <a href="#"><i class="fas fa-apple-alt me-2"></i>Pumpkin</a>
-                                                    <span>(5)</span>
-                                                </div>
-                                            </li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <h4 class="mb-4">Featured products</h4>
-                                    <div class="d-flex align-items-center justify-content-start">
-                                        <div class="rounded" style={{width: '100px', height: '100px'}}>
-                                            <img src="img/featur-1.jpg" class="img-fluid rounded" alt="Image" />
-                                        </div>
-                                        <div>
-                                            <h6 class="mb-2">Big Banana</h6>
-                                            <div class="d-flex mb-2">
-                                                <i class="fa fa-star text-secondary"></i>
-                                                <i class="fa fa-star text-secondary"></i>
-                                                <i class="fa fa-star text-secondary"></i>
-                                                <i class="fa fa-star text-secondary"></i>
-                                                <i class="fa fa-star"></i>
-                                            </div>
-                                            <div class="d-flex mb-2">
-                                                <h5 class="fw-bold me-2">2.99 $</h5>
-                                                <h5 class="text-danger text-decoration-line-through">4.11 $</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-start">
-                                        <div class="rounded" style={{width: '100px', height: '100px'}}>
-                                            <img src="img/featur-2.jpg" class="img-fluid rounded" alt="" />
-                                        </div>
-                                        <div>
-                                            <h6 class="mb-2">Big Banana</h6>
-                                            <div class="d-flex mb-2">
-                                                <i class="fa fa-star text-secondary"></i>
-                                                <i class="fa fa-star text-secondary"></i>
-                                                <i class="fa fa-star text-secondary"></i>
-                                                <i class="fa fa-star text-secondary"></i>
-                                                <i class="fa fa-star"></i>
-                                            </div>
-                                            <div class="d-flex mb-2">
-                                                <h5 class="fw-bold me-2">2.99 $</h5>
-                                                <h5 class="text-danger text-decoration-line-through">4.11 $</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-start">
-                                        <div class="rounded" style={{width: '100px', height: '100px'}}>
-                                            <img src="img/featur-3.jpg" class="img-fluid rounded" alt="" />
-                                        </div>
-                                        <div>
-                                            <h6 class="mb-2">Big Banana</h6>
-                                            <div class="d-flex mb-2">
-                                                <i class="fa fa-star text-secondary"></i>
-                                                <i class="fa fa-star text-secondary"></i>
-                                                <i class="fa fa-star text-secondary"></i>
-                                                <i class="fa fa-star text-secondary"></i>
-                                                <i class="fa fa-star"></i>
-                                            </div>
-                                            <div class="d-flex mb-2">
-                                                <h5 class="fw-bold me-2">2.99 $</h5>
-                                                <h5 class="text-danger text-decoration-line-through">4.11 $</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-start">
-                                        <div class="rounded me-4" style={{width: '100px', height: '100px'}}>
-                                            <img src="img/vegetable-item-4.jpg" class="img-fluid rounded" alt="" />
-                                        </div>
-                                        <div>
-                                            <h6 class="mb-2">Big Banana</h6>
-                                            <div class="d-flex mb-2">
-                                                <i class="fa fa-star text-secondary"></i>
-                                                <i class="fa fa-star text-secondary"></i>
-                                                <i class="fa fa-star text-secondary"></i>
-                                                <i class="fa fa-star text-secondary"></i>
-                                                <i class="fa fa-star"></i>
-                                            </div>
-                                            <div class="d-flex mb-2">
-                                                <h5 class="fw-bold me-2">2.99 $</h5>
-                                                <h5 class="text-danger text-decoration-line-through">4.11 $</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-start">
-                                        <div class="rounded me-4" style={{width: '100px', height: '100px'}}>
-                                            <img src="img/vegetable-item-5.jpg" class="img-fluid rounded" alt="" />
-                                        </div>
-                                        <div>
-                                            <h6 class="mb-2">Big Banana</h6>
-                                            <div class="d-flex mb-2">
-                                                <i class="fa fa-star text-secondary"></i>
-                                                <i class="fa fa-star text-secondary"></i>
-                                                <i class="fa fa-star text-secondary"></i>
-                                                <i class="fa fa-star text-secondary"></i>
-                                                <i class="fa fa-star"></i>
-                                            </div>
-                                            <div class="d-flex mb-2">
-                                                <h5 class="fw-bold me-2">2.99 $</h5>
-                                                <h5 class="text-danger text-decoration-line-through">4.11 $</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-start">
-                                        <div class="rounded me-4" style={{width: '100px', height: '100px'}}>
-                                            <img src="img/featur-2.jpg" class="img-fluid rounded" alt="" />
-                                        </div>
-                                        <div>
-                                            <h6 class="mb-2">Big Banana</h6>
-                                            <div class="d-flex mb-2">
-                                                <i class="fa fa-star text-secondary"></i>
-                                                <i class="fa fa-star text-secondary"></i>
-                                                <i class="fa fa-star text-secondary"></i>
-                                                <i class="fa fa-star text-secondary"></i>
-                                                <i class="fa fa-star"></i>
-                                            </div>
-                                            <div class="d-flex mb-2">
-                                                <h5 class="fw-bold me-2">2.99 $</h5>
-                                                <h5 class="text-danger text-decoration-line-through">4.11 $</h5>
-                                            </div>
-                                        </div>
-                                    </div>
+
                                     <div class="d-flex justify-content-center my-4">
-                                        <a href="#" class="btn border border-secondary px-4 py-3 rounded-pill text-primary w-100">View More</a>
+                                        <a href="#" class="btn btn-dark border border-secondary px-4 py-3 rounded-pill text-white w-50">View More</a>
                                     </div>
                                 </div>
                             </div>
