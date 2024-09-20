@@ -9,6 +9,5 @@ export default function homeMain() {
             <Home_2 />
         </div>
 
-
     )
 }
