@@ -31,7 +31,7 @@ export default function Shop_1() {
                 }));
                 setCats(transformedCategories);
 
-                
+
 
                 // Fetch sản phẩm
                 const res = await fetch(`http://localhost:3001/products?_sort=${sortOrder}`);
@@ -137,13 +137,13 @@ export default function Shop_1() {
                                 <div className="col-xl-3">
                                     <form className="bg-white ps-3 border-2 py-3 rounded d-flex justify-content-between mb-4" onChange={handleSortChange}>
                                         <label htmlFor="fruits">Showing:</label>
-                                    <select id="fruits" name="fruitlist" className="border-0 form-select-sm bg-light me-3">
-                                        <option value="">Default</option>
-                                        <option value="-price">Price (High to Low)</option>
-                                        <option value="price">Price (Low to High)</option>
-                                        <option value="name">Name (A to Z)</option>
-                                        <option value="-name">Name (Z to A)</option>
-                                    </select>
+                                        <select id="fruits" name="fruitlist" className="border-0 form-select-sm bg-light me-3">
+                                            <option value="">Default</option>
+                                            <option value="-price">Price (High to Low)</option>
+                                            <option value="price">Price (Low to High)</option>
+                                            <option value="name">Name (A to Z)</option>
+                                            <option value="-name">Name (Z to A)</option>
+                                        </select>
                                     </form>
                                 </div>
                             </div>
@@ -156,7 +156,7 @@ export default function Shop_1() {
                                                 <ul className="list-unstyled fruite-categorie">
                                                     <li>
                                                         <div onClick={() => handleCategoryClick("All")} className="d-flex justify-content-between fruite-name">
-                                                            <a href="#"><i className="fas fa-apple-alt me-2"></i>All</a>
+                                                            <a href="#" className="text-dark tw-bold">All</a>
                                                         </div>
                                                     </li>
                                                     {cats.map((item, index) => (
@@ -165,13 +165,14 @@ export default function Shop_1() {
                                                                 onClick={() => handleCategoryClick(item.name)}
                                                                 className="d-flex justify-content-between fruite-name"
                                                             >
-                                                                <a href="#"><i className="fas fa-apple-alt me-2"></i>{item.name}</a>
+                                                                <a href="#" className="text-dark">{item.name}</a>
+                                                                <i class="bi bi-caret-down-fill"></i>
                                                             </div>
                                                             {openCategory === item.name && (
                                                                 <ul className="list-unstyled ps-4">
                                                                     {item.products.map(product => (
-                                                                        <li key={product.id}>
-                                                                            <a href="#" onClick={() => handleSubCategoryClick(product.name)}>{product.name}</a>
+                                                                        <li className="d-flex justify-content-start" key={product.id}>
+                                                                            <a className="text-dark" href="#" onClick={() => handleSubCategoryClick(product.name)}>{product.name}</a>
                                                                         </li>
                                                                     ))}
                                                                 </ul>
