@@ -34,7 +34,6 @@ export default function Navbar() {
                             <Link to={'/feedback'} class="nav-item nav-link text-white ">Feedback</Link>
                             <Link to={'/about'} class="nav-item nav-link text-white ">About Us</Link>
 
-
                         </div>
                     </div>
                 </nav>

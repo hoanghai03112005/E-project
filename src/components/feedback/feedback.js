@@ -3,12 +3,7 @@ export default function Feedback() {
     return (
         <>
             <div class="container-fluid page-header py-5">
-                <h1 class="text-center text-white display-6">Feedback</h1>
-                <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item"><Link to="/">Home</Link></li>
-                    <li class="breadcrumb-item"><Link to="/shop">Shop</Link></li>
-                    <li class="breadcrumb-item active text-white">Feedback</li>
-                </ol>
+                <h1 class="text-center text-white display-6 centered-text">Feedback</h1>
             </div>
 
             <div class="container-fluid py-5 container" style={{ marginLeft: '450px' }}>
