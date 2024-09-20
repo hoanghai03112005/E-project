@@ -4,7 +4,8 @@ export default function Home_5() { //Fact
             <div class="container-fluid py-5 mb-5  ">
                 <div class="container py-5">
                     <div class="row g-5 align-items-center">
-                        <div class="col-md-12 col-lg-7">
+                        <div class="col-md-12 col-lg-7"  style={{position:'relative'}} >
+                        <h1 style={{position:'absolute',color:'#FF82AB',left:'33%',top:'50%',fontWeight:'bold' }}>Home Is Best</h1>
                             <img src="img/homeImage/banner1.jpg" class="img-fluid w-100 h-150 bg-secondary rounded" alt="First slide" />
                         </div>
                         <div class="col-md-12 col-lg-5">
