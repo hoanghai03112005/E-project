@@ -47,12 +47,12 @@ export default function Shop_1() {
                     filtered = productsArray;
                 } else {
                     // Lọc sản phẩm theo danh mục nếu một danh mục cụ thể được chọn
-                    const selectedCat = transformedCategories.find(cat => 
+                    const selectedCat = transformedCategories.find(cat =>
                         cat.products.some(product => product.name === selectedCategory)
                     );
 
                     if (selectedCat) {
-                        filtered = productsArray.filter(product => 
+                        filtered = productsArray.filter(product =>
                             selectedCat.products.some(p => p.name === selectedCategory && p.id === product.categoryId)
                         );
                     }
@@ -133,14 +133,14 @@ export default function Shop_1() {
                                 </div>
                                 <div className="col-6"></div>
                                 <div className="col-xl-3">
-                                    <form className="bg-light ps-3 py-3 rounded d-flex justify-content-between mb-4" onChange={handleSortChange}>
-                                        <label htmlFor="fruits">Sorting:</label>
+                                    <form className="bg-white ps-3 border-2 py-3 rounded d-flex justify-content-between mb-4" onChange={handleSortChange}>
+                                        <label htmlFor="fruits">Showing:</label>
                                         <select id="fruits" name="fruitlist" className="border-0 form-select-sm bg-light me-3">
-                                            <option value="">Mặc định</option>
-                                            <option value="-price">Giảm dần theo giá</option>
-                                            <option value="price">Tăng dần theo giá</option>
-                                            <option value="name">Tăng dần theo tên</option>
-                                            <option value="-name">Giảm dần theo tên</option>
+                                            <option value="">SORT BY</option>
+                                            <option value="-price">PRICE (HIGH-LOW)</option>
+                                            <option value="price">PRICE (LOW-HIGH)</option>
+                                            <option value="name">RISE (NAME)</option>
+                                            <option value="-name">DOWN (NAME)</option>
                                         </select>
                                     </form>
                                 </div>
@@ -159,8 +159,8 @@ export default function Shop_1() {
                                                     </li>
                                                     {cats.map((item, index) => (
                                                         <li key={index}>
-                                                            <div 
-                                                                onClick={() => handleCategoryClick(item.name)} 
+                                                            <div
+                                                                onClick={() => handleCategoryClick(item.name)}
                                                                 className="d-flex justify-content-between fruite-name"
                                                             >
                                                                 <a href="#"><i className="fas fa-apple-alt me-2"></i>{item.name}</a>
@@ -190,18 +190,38 @@ export default function Shop_1() {
                                                     <div className="fruite-img">
                                                         <Link to={`http://localhost:3000/shop-detail/${item.id}`}><img src={item.img} className="img w-100 rounded-top" alt="" /></Link>
                                                     </div>
-                                                    <div className="text-white bg-secondary px-3 py-1 rounded position-absolute" style={{ top: '10px', left: '10px' }}>Fruits</div>
+                                                    <div className="text-white bg-danger px-3 py-1 rounded position-absolute" style={{ top: '10px', left: '10px' }}>Sale 15%</div>
                                                     <div className="p-4 border border-secondary border-top-0 rounded-bottom">
                                                         <h4>{item.name}</h4>
-                                                        <p>{item.description}</p>
+                                                        <p className="text-truncate">{item.description}</p>
                                                         <div className="d-flex justify-content-between flex-lg-wrap">
                                                             <p className="text-dark fs-5 fw-bold mb-0">${item.price}</p>
-                                                            <Link to={`http://localhost:3000/shop-detail/${item.id}`} className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> View Detail</Link>
+                                                            <Link to={`http://localhost:3000/shop-detail/${item.id}`} className="btn border border-secondary bg-dark rounded-pill px-3 text-white"><i className="fa fa-shopping-bag me-2 text-white"></i> View Detail</Link>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         ))}
+                                        <nav aria-label="Page navigation example">
+                                            <ReactPaginate
+                                                breakLabel="..."
+                                                nextLabel=">"
+                                                onPageChange={handlePageClick}
+                                                pageRangeDisplayed={5}
+                                                pageCount={totalProduct}
+                                                previousLabel="<"
+                                                pageClassName="page-item"
+                                                pageLinkClassName="page-link bg-dark border-white text-white"
+                                                previousClassName="page-item"
+                                                previousLinkClassName="page-link bg-dark border-white text-white"
+                                                nextClassName="page-item"
+                                                nextLinkClassName="page-link bg-dark border-white text-white"
+                                                breakClassName="page-item"
+                                                breakLinkClassName="page-link"
+                                                containerClassName="pagination"
+                                                activeClassName="active"
+                                            />
+                                        </nav>
                                     </div>
                                 </div>
                             </div>
@@ -209,25 +229,6 @@ export default function Shop_1() {
                     </div>
                 </div>
             </div>
-
-            <ReactPaginate
-                breakLabel="..."
-                nextLabel="next >"
-                onPageChange={handlePageClick}
-                pageRangeDisplayed={5}
-                pageCount={totalProduct}
-                previousLabel="< previous"
-                pageClassName="page-item"
-                pageLinkClassName="page-link"
-                previousClassName="page-item"
-                previousLinkClassName="page-link"
-                nextClassName="page-item"
-                nextLinkClassName="page-link"
-                breakClassName="page-item"
-                breakLinkClassName="page-link"
-                containerClassName="pagination"
-                activeClassName="active"
-            />
         </>
     );
 }
