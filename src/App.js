@@ -30,13 +30,13 @@ function App() {
         <Route path='/feedback' element={<Feedback />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/professtion' element={<Professtion />} />
-<<<<<<< HEAD
+
         <Route path='/designers-gallery' element={<Gallery />} />
         
-=======
+
         <Route path='/professtion' element={<Professtion />} />
         <Route path='/about' element={<About />} />
->>>>>>> dbcc7ee073ca3a61c349e8f3dd7589ef9c1eedea
+
       </Routes>
       <Footer />
 
