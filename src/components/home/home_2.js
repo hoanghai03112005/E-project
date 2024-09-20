@@ -15,8 +15,11 @@ export default function Home_2() { // carousel
                                 Mentioning home is mentioning a sacred and cozy place, a place where everyone wants to return to enjoy a sense of peace, a sense of togetherness, leaving the hardships of life outside the door.
 
                                 We, LE GIA WOODEN FURNITURE, always want to bring you a space where you feel "this is truly my beloved place!" And with that wish, we strive every day to understand you and bring you products that create true living values.</p>
-                            <button type="submit" class="btn btn-dark border-2 rounded-pill text-white h-150">Contact Now</button>
+                           
+                            <a  href="/contact" type="submit" class="btn btn-dark border-2 rounded-pill text-white h-150">Contact Now</a>
+                           
                         </div>
+
                     </div>
                 </div>
             </div>
