@@ -124,9 +124,9 @@ export default function ShopDetail() {
                                         <>
                                             <div class="col-lg-6" style={{ marginTop: '100px' }}>
                                                 <div class="border rounded">
-                                                    <a href="#">
+                                                    <Link>
                                                         <img src={selectID.img} class="img-fluid rounded" alt="Image" />
-                                                    </a>
+                                                    </Link>
                                                 </div>
                                             </div>
 
@@ -158,7 +158,7 @@ export default function ShopDetail() {
                                                             </button>
                                                         </div>
                                                     </div>
-                                                    <a href="#" class="btn btn-dark border border-secondary rounded-pill mb-5 text-white" style={{ marginLeft: '-310px' }}><i class="fa fa-shopping-bag me-2 text-white"></i> Add to cart</a>
+                                                    <Link class="btn btn-dark border border-secondary rounded-pill mb-5 text-white" style={{ marginLeft: '-310px' }}><i class="fa fa-shopping-bag me-2 text-white"></i> Add to cart</Link>
                                                 </div>
 
                                             </div>
@@ -215,7 +215,7 @@ export default function ShopDetail() {
                                                                 <p class="mb-0">Сheck</p>
                                                             </div>
                                                             <div class="col-6">
-                                                                <p class="mb-0">Healthy</p>
+                                                                <p class="mb-0">Good</p>
                                                             </div>
                                                         </div>
                                                         <div class="row bg-light text-center align-items-center justify-content-center py-2">
@@ -223,7 +223,7 @@ export default function ShopDetail() {
                                                                 <p class="mb-0">Min Weight</p>
                                                             </div>
                                                             <div class="col-6">
-                                                                <p class="mb-0">250 Kg</p>
+                                                                <p class="mb-0">500 Kg</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -321,7 +321,7 @@ export default function ShopDetail() {
                                         <ul className="list-unstyled fruite-categorie">
                                             <li>
                                                 <div onClick={() => handleCategoryClick("All")} className="d-flex justify-content-between fruite-name">
-                                                    <a href="#" className="text-dark tw-bold">All</a>
+                                                    <Link onClick={() => handleCategoryClick("All")} className="text-dark tw-bold">All</Link>
                                                 </div>
                                             </li>
                                             {cats.map((item, index) => (
@@ -330,14 +330,14 @@ export default function ShopDetail() {
                                                         onClick={() => handleCategoryClick(item.name)}
                                                         className="d-flex justify-content-between fruite-name"
                                                     >
-                                                        <a href="#" className="text-dark">{item.name}</a>
+                                                        <Link onClick={() => handleCategoryClick(item.name)} className="text-dark">{item.name}</Link>
                                                         <i class="bi bi-caret-down-fill"></i>
                                                     </div>
                                                     {openCategory === item.name && (
                                                         <ul className="list-unstyled ps-4">
                                                             {item.products.map(product => (
                                                                 <li className="d-flex justify-content-start" key={product.id}>
-                                                                    <a className="text-dark" href="#" onClick={() => handleSubCategoryClick(product.name)}>{product.name}</a>
+                                                                    <Link to={"/shop"} onClick={() => handleSubCategoryClick(product.name)} className="text-dark">{product.name}</Link>
                                                                 </li>
                                                             ))}
                                                         </ul>
