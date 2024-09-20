@@ -37,13 +37,14 @@ export default function footer() {
                         </div>
                         <div class="col-lg-3 col-md-6">
                             <div class="d-flex flex-column text-start footer-item">
-                                <h4 class="text-light mb-3">Shop Info</h4>
-                                <a class="btn-link" href="">About Us</a>
-                                <a class="btn-link" href="">Contact Us</a>
-                                <a class="btn-link" href="">Privacy Policy</a>
-                                <a class="btn-link" href="">Terms & Condition</a>
-                                <a class="btn-link" href="">Return Policy</a>
-                                <a class="btn-link" href="">FAQs & Help</a>
+                                <h4 class="text-light mb-3"  href="/">Home</h4>
+                                <a class="btn-link" href="/professtion">Professional Interior</a>
+                                <a class="btn-link" href="/designers-gallery">Designers Gallery</a>
+                                <a class="btn-link" href="/shop">Products</a>
+                                <a class="btn-link" href="/contact">Contact Us</a>
+                                <a class="btn-link" href="/about">About Us</a>                       
+                                <a class="btn-link" href="/about">Feedback</a>                                                                                          
+
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6">
