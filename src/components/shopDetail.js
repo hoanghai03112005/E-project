@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 export default function ShopDetail() {
     var { id } = useParams()
@@ -7,11 +8,81 @@ export default function ShopDetail() {
     var [product, setProduct] = useState([])
     var [test, setTest] = useState(false)
 
+    const [sortOrder, setSortOrder] = useState("");
+    const [products, setProducts] = useState([]);
+    const [cats, setCats] = useState([]);
+    const [filteredProducts, setFilteredProducts] = useState([]);
+    const [currentPage, setCurrentPage] = useState(0);
+    const [totalProduct, setTotalProduct] = useState(0);
+    const [itemsPerPage] = useState(6);
+    const [selectedCategory, setSelectedCategory] = useState("All");
+    const [openCategory, setOpenCategory] = useState(null);
+
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                // Fetch danh mục
+                const categoriesRes = await fetch('http://localhost:3001/categories');
+                const categoriesData = await categoriesRes.json();
+                console.log("Categories Data:", categoriesData);
+
+                // Chuyển đổi cấu trúc đối tượng danh mục thành mảng
+                const transformedCategories = Object.keys(categoriesData).map(categoryKey => ({
+                    name: categoryKey,
+                    products: categoriesData[categoryKey]
+                }));
+                setCats(transformedCategories);
+
+
+
+                // Fetch sản phẩm
+                const res = await fetch(`http://localhost:3001/products?_sort=${sortOrder}`);
+                const data = await res.json();
+                console.log("Products Data:", data);
+
+                // Nếu dữ liệu sản phẩm là một mảng chứa một mảng
+                const productsArray = Array.isArray(data) && Array.isArray(data[0]) ? data[0] : data;
+                console.log("Flattened Products Array:", productsArray);
+
+                let filtered = [];
+
+                if (selectedCategory === "All") {
+                    // Hiển thị tất cả sản phẩm nếu "All" được chọn
+                    filtered = productsArray;
+                } else {
+                    // Lọc sản phẩm theo danh mục nếu một danh mục cụ thể được chọn
+                    const selectedCat = transformedCategories.find(cat =>
+                        cat.products.some(product => product.name === selectedCategory)
+                    );
+
+                    if (selectedCat) {
+                        filtered = productsArray.filter(product =>
+                            selectedCat.products.some(p => p.name === selectedCategory && p.id === product.categoryId)
+                        );
+                    }
+                }
+
+                console.log("Filtered Products:", filtered);
+
+                setProducts(filtered);
+                setFilteredProducts(filtered);
+                setTotalProduct(Math.ceil(filtered.length / itemsPerPage));
+            } catch (error) {
+                console.error("Error fetching data:", error);
+            }
+        };
+
+        fetchData();
+    }, [sortOrder, selectedCategory, itemsPerPage]);
+
     useEffect(function () {
         if (!test) {
             fetchData()
         }
     }, [test])
+
 
     var fetchData = async function () {
         var res = await fetch('http://localhost:3001/products')
@@ -24,7 +95,22 @@ export default function ShopDetail() {
         return item.id == id
     })
 
+    const handleSubCategoryClick = (subCategory) => {
+        setSelectedCategory(subCategory);
+        setOpenCategory(null); // Đóng danh mục khi chọn một danh mục con
+    };
 
+    const handleCategoryClick = (category) => {
+        if (category === "All") {
+            // Khi nhấn vào "All", đặt lại selectedCategory và mở tất cả danh mục
+            setSelectedCategory("All");
+            setOpenCategory(null); // Đóng tất cả danh mục
+        } else {
+            // Xử lý nhấn vào danh mục lớn
+            setOpenCategory(openCategory === category ? null : category);
+            setSelectedCategory("All"); // Đặt lại khi mở danh mục lớn
+        }
+    };
 
     return (
         <>
@@ -105,7 +191,7 @@ export default function ShopDetail() {
                                                                 <p class="mb-0">Weight</p>
                                                             </div>
                                                             <div class="col-6">
-                                                                <p class="mb-0">1 kg</p>
+                                                                <p class="mb-0">15 kg</p>
                                                             </div>
                                                         </div>
                                                         <div class="row text-center align-items-center justify-content-center py-2">
@@ -113,7 +199,7 @@ export default function ShopDetail() {
                                                                 <p class="mb-0">Country of Origin</p>
                                                             </div>
                                                             <div class="col-6">
-                                                                <p class="mb-0">Agro Farm</p>
+                                                                <p class="mb-0">China</p>
                                                             </div>
                                                         </div>
                                                         <div class="row bg-light text-center align-items-center justify-content-center py-2">
@@ -121,7 +207,7 @@ export default function ShopDetail() {
                                                                 <p class="mb-0">Quality</p>
                                                             </div>
                                                             <div class="col-6">
-                                                                <p class="mb-0">Organic</p>
+                                                                <p class="mb-0">Natural Woods</p>
                                                             </div>
                                                         </div>
                                                         <div class="row text-center align-items-center justify-content-center py-2">
@@ -227,27 +313,38 @@ export default function ShopDetail() {
                                 </form>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-xl-3">
+                        <div class="col-lg-4 col-xl-3 py-6">
                             <div class="row g-4 fruite">
                                 <div class="col-lg-12">
-
                                     <div class="mb-4">
                                         <h4>Categories</h4>
-                                        <ul class="list-unstyled fruite-categorie">
+                                        <ul className="list-unstyled fruite-categorie">
                                             <li>
-                                                <div class="d-flex justify-content-between fruite-name">
-                                                    <a href="#"><i class="fas fa-apple-alt me-2"></i>Apples</a>
-                                                    <span>(3)</span>
+                                                <div onClick={() => handleCategoryClick("All")} className="d-flex justify-content-between fruite-name">
+                                                    <a href="#" className="text-dark tw-bold">All</a>
                                                 </div>
                                             </li>
+                                            {cats.map((item, index) => (
+                                                <li key={index}>
+                                                    <div
+                                                        onClick={() => handleCategoryClick(item.name)}
+                                                        className="d-flex justify-content-between fruite-name"
+                                                    >
+                                                        <a href="#" className="text-dark">{item.name}</a>
+                                                        <i class="bi bi-caret-down-fill"></i>
+                                                    </div>
+                                                    {openCategory === item.name && (
+                                                        <ul className="list-unstyled ps-4">
+                                                            {item.products.map(product => (
+                                                                <li className="d-flex justify-content-start" key={product.id}>
+                                                                    <a className="text-dark" href="#" onClick={() => handleSubCategoryClick(product.name)}>{product.name}</a>
+                                                                </li>
+                                                            ))}
+                                                        </ul>
+                                                    )}
+                                                </li>
+                                            ))}
                                         </ul>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <h4 class="mb-4">Featured products</h4>
-
-                                    <div class="d-flex justify-content-center my-4">
-                                        <a href="#" class="btn btn-dark border border-secondary px-4 py-3 rounded-pill text-white w-50">View More</a>
                                     </div>
                                 </div>
                             </div>

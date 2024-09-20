@@ -156,7 +156,7 @@ export default function Shop_1() {
                                                 <ul className="list-unstyled fruite-categorie">
                                                     <li>
                                                         <div onClick={() => handleCategoryClick("All")} className="d-flex justify-content-between fruite-name">
-                                                            <a href="#" className="text-dark tw-bold">All</a>
+                                                            <Link onClick={() => handleCategoryClick("All")} className="text-dark tw-bold">All</Link>
                                                         </div>
                                                     </li>
                                                     {cats.map((item, index) => (
@@ -165,14 +165,14 @@ export default function Shop_1() {
                                                                 onClick={() => handleCategoryClick(item.name)}
                                                                 className="d-flex justify-content-between fruite-name"
                                                             >
-                                                                <a href="#" className="text-dark">{item.name}</a>
+                                                                <Link onClick={() => handleCategoryClick(item.name)} className="text-dark">{item.name}</Link>
                                                                 <i class="bi bi-caret-down-fill"></i>
                                                             </div>
                                                             {openCategory === item.name && (
                                                                 <ul className="list-unstyled ps-4">
                                                                     {item.products.map(product => (
                                                                         <li className="d-flex justify-content-start" key={product.id}>
-                                                                            <a className="text-dark" href="#" onClick={() => handleSubCategoryClick(product.name)}>{product.name}</a>
+                                                                            <Link className="text-dark" onClick={() => handleSubCategoryClick(product.name)}>{product.name}</Link>
                                                                         </li>
                                                                     ))}
                                                                 </ul>
