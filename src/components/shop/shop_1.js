@@ -115,7 +115,7 @@ export default function Shop_1() {
     };
 
     const generateRandomDiscount = () => {
-        return Math.floor(Math.random() * 100) + 1; // Giá trị từ 1 đến 100
+        return Math.floor(Math.random() * 40) + 1; // Giá trị từ 1 đến 100
     };
 
     return (
