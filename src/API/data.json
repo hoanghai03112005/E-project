@@ -324,7 +324,7 @@
         "id": 27,
         "name": "Adjustable Recliner Chair",
         "description": "An adjustable recliner chair that offers customizable comfort. Ideal for relaxing after a long day.",
-        "categoryId": 1,
+        "categoryId": 2,
         "price": 480,
         "img": "https://m.media-amazon.com/images/I/512e65EPX6L._AC_US1000_.jpg"
       },
@@ -415,6 +415,338 @@
         "categoryId": 13,
         "price": 210,
         "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0E46KWnFjeItWhlREyeFK7lWjW9kNUM4O0w&s"
+      },
+      {
+        "id": 39,
+        "name": "Toni's side table",
+        "description": "A minimalist floor table with a sleek design. Provides soft and adjustable lighting.",
+        "categoryId": 3,
+        "price": 150,
+        "img": "img/product/table1.jpg"
+      },
+      {
+        "id": 40,
+        "name": "Bali 518 Leather 3-seater Combo Sofa",
+        "description": "Bali 518 3-seater leather combo sofa in trendy brick orange color is your wisest choice for a warmer, softer living room space.",
+        "categoryId": 1,
+        "price": 2000,
+        "img": "img/product/sofa1.jpg"
       }
+      ,
+      {
+        "id": 41,
+        "name": "Hangar display shelves",
+        "description": "This is a leather sofa model with a beech metalic frame along with super elastic mousse.",
+        "categoryId": 5,
+        "price": 1900,
+        "img": "img/product/case1.jpg"
+      }
+      ,
+      {
+        "id": 42,
+        "name": "Hung King 3-seater Sofa + Pillow VACT3231",
+        "description": "This is a leather sofa model with a beech metalic frame along with super elastic mousse.",
+        "categoryId": 1,
+        "price": 960,
+        "img": "img/product/sofa2.jpg"
+      }
+      ,
+      {
+        "id": 43,
+        "name": "Jadora 2.5 seater fabric sofa VACT4029/VACT4709",
+        "description": "This is a leather sofa model with a beech metalic frame along with super elastic mousse.",
+        "categoryId": 1,
+        "price": 1050,
+        "img": "img/product/sofa3.jpg"
+      }
+      ,
+      {
+        "id": 44,
+        "name": "Coastal 1 seater sofa green fabric",
+        "description": "This is a leather sofa model with a beech metalic frame along with super elastic mousse.",
+        "categoryId": 1,
+        "price": 1050,
+        "img": "img/product/sofa4.jpg"
+      }
+      ,
+      {
+        "id": 45,
+        "name": "Armchair Doulton vintage",
+        "description": "This is a leather sofa model with a beech metalic frame along with super elastic mousse.",
+        "categoryId": 2,
+        "price": 1050,
+        "img": "img/product/chair2.jpg"
+      }
+      ,
+      {
+        "id": 46,
+        "name": "Coastal green bed 1m6",
+        "description": "This is a leather sofa model with a beech metalic frame along with super elastic mousse.",
+        "categoryId": 4,
+        "price": 1050,
+        "img": "img/product/bed1.jpg"
+      }
+      ,
+      {
+        "id": 47,
+        "name": "Cabiner Olive",
+        "description": "This is a leather sofa model with a beech metalic frame along with super elastic mousse.",
+        "categoryId": 6,
+        "price": 2500,
+        "img": "img/product/cabinet1.jpg"
+      }
+      ,
+      {
+        "id": 48,
+        "name": "Sink black Towers",
+        "description": "This is a leather sofa model with a beech metalic frame along with super elastic mousse.",
+        "categoryId": 8,
+        "price": 6000,
+        "img": "img/product/sink1.jpg"
+      }
+      ,
+      {
+        "id": 49,
+        "name": "Porto M2 8-seat dining table",
+        "description": "This is a leather sofa model with a beech metalic frame along with super elastic mousse.",
+        "categoryId": 9,
+        "price": 6000,
+        "img": "img/product/table2.jpg"
+      }
+      ,
+      {
+        "id": 50,
+        "name": "Lowes modern kitchen backsplashes",
+        "description": "This is a leather sofa model with a beech metalic frame along with super elastic mousse.",
+        "categoryId": 10,
+        "price": 11500,
+        "img": "img/product/back1.jpg"
+      },
+      {
+        "id": 51,
+        "name": "Ceiling Light/Night Fixture",
+        "description": "A modern ceiling light fixture that provides ample lighting and adds a contemporary touch to your room.",
+        "categoryId": 11,
+        "price": 250,
+        "img": "https://m.media-amazon.com/images/I/71JQfbfL7BL.jpg"
+      },
+      {
+        "id": 52,
+        "name": "Figure Table Lamp",
+        "description": "A modern ceiling light fixture that provides ample lighting and adds a contemporary touch to your room.",
+        "categoryId": 14,
+        "price": 250,
+        "img": "img/product/lamp1.jpg"
+      }
+      ,
+      {
+        "id": 53,
+        "name": "Blue BBB Table Elegant Lamp",
+        "description": "A modern ceiling light fixture that provides ample lighting and adds a contemporary touch to your room.",
+        "categoryId": 14,
+        "price": 325,
+        "img": "img/product/lamp2.jpg"
+      }
+      ,
+      {
+        "id": 54,
+        "name": "Direct Bruial Light Poles",
+        "description": "A modern ceiling light fixture that provides ample lighting and adds a contemporary touch to your room.",
+        "categoryId": 15,
+        "price": 7800,
+        "img": "img/product/outdoor1.jpg"
+      }
+      ,
+      {
+        "id": 55,
+        "name": "Patect Mini-Paradaise Light",
+        "description": "A modern ceiling light fixture that provides ample lighting and adds a contemporary touch to your room.",
+        "categoryId": 15,
+        "price": 8100,
+        "img": "img/product/outdoor1.jpg"
+      }
+    ],
+    
+
+    "design_styles": [
+
+      {
+        "id": 1,
+        "name": "Contemporary Living Room",
+        "category": "Living Room",
+        "style": "Contemporary",
+        "price": 12000,
+        "description": "A modern living room with clean lines and neutral colors.",
+        "img": "https://www.decorilla.com/online-decorating/wp-content/uploads/2024/01/Modern-living-room-with-colorful-decorating-by-Decorilla-scaled.jpeg",
+        "products": [
+          {
+            "id": 1,
+            "name": "Sleek Sofa",
+            "price": 1200
+          },
+          {
+            "id": 2,
+            "name": "Minimalist Coffee Table",
+            "price": 400
+          }
+        ],
+        "totalCost": 1600
+      },
+      {
+        "id": 2,
+        "name": "Elegant Kitchen",
+        "category": "Kitchen",
+        "style": "Elegant",
+        "price": 25000,
+        "description": "An elegant kitchen with marble countertops and stainless steel appliances.",
+        "img": "https://elegantkd.com/wp-content/uploads/2024/01/image.jpg",
+        "products": [
+          {
+            "id": 3,
+            "name": "Marble Countertop",
+            "price": 2000
+          },
+          {
+            "id": 4,
+            "name": "Luxury Refrigerator",
+            "price": 1800
+          }
+        ],
+        "totalCost": 3800
+      },
+      {
+        "id": 3,
+        "name": "Rustic Bedroom",
+        "category": "Bedroom",
+        "price": 5000,
+        "style": "Rustic",
+        "description": "A cozy bedroom with wooden furniture and warm colors.",
+        "img": "https://www.coasterfurniture.com/wp-content/uploads/bedroom-with-a-large-bed-and-a-big-window.jpg",
+        "products": [
+          {
+            "id": 5,
+            "name": "Wooden Bed Frame",
+            "price": 1500
+          },
+          {
+            "id": 6,
+            "name": "Vintage Wardrobe",
+            "price": 800
+          }
+        ],
+        "totalCost": 2300
+      },
+
+
+      {
+        "id": 4,
+        "name": "Modern Office",
+        "category": "Office",
+        "price": 6000,
+        "style": "Modern",
+        "description": "A sleek office space with ergonomic furniture and smart lighting.",
+        "img": "https://www.winnershtriangle.co.uk/wp-content/uploads/2023/06/WT-banner.jpg",
+        "products": [
+          {
+            "id": 7,
+            "name": "Ergonomic Chair",
+            "price": 600
+          },
+          {
+            "id": 8,
+            "name": "Smart Desk Lamp",
+            "price": 150
+          }
+        ],
+        "totalCost": 750
+      },
+
+      {
+        "id": 5,
+        "name": "Scandinavian Dining Room",
+        "category": "Dining Room",
+        "price": 18000,
+        "style": "Scandinavian",
+        "description": "A bright dining room with minimalist furniture and natural materials.",
+        "img": "https://mojoboutique.com/cdn/shop/articles/scandinavian_dining_table_ideas_1344x.jpg?v=1710009231",
+        "products": [
+          {
+            "id": 9,
+            "name": "Dining Table",
+            "price": 900
+          },
+          {
+            "id": 10,
+            "name": "Chesterfield Chairs",
+            "price": 500
+          }
+        ],
+        "totalCost": 1400
+      },
+      {
+        "id": 6,
+        "name": "Industrial Loft",
+        "category": "Living Room",
+        "price": 3600,
+        "style": "Industrial",
+        "description": "An open-concept loft with exposed brick walls and metal fixtures.",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuCnNRrlfIxKtvn7DTvTSZV8_aU-dKscaWHw&s",
+        "products": [
+          {
+            "id": 11,
+            "name": "Leather Sectional Sofa",
+            "price": 2200
+          },
+          {
+            "id": 12,
+            "name": "Metal Floor Lamp",
+            "price": 300
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "Balian Living Room",
+        "category": "Living Room",
+        "price": 18000,
+        "style": "Balian",
+        "description": "Elegant style for living room from Bali sofa.",
+        "img": "img/designstyler/living2.jpg",
+        "products": [
+          {
+            "id": 41
+          },
+          {
+            "id": 40
+          },
+          {
+            "id": 39
+          }
+        ],
+        "totalCost": 1400
+      },
+      {
+        "id": 8,
+        "name": "Scandinavian Dining Room",
+        "category": "Dining Room",
+        "price": 18000,
+        "style": "Scandinavian",
+        "description": "A bright dining room with minimalist furniture and natural materials.",
+        "img": "https://mojoboutique.com/cdn/shop/articles/scandinavian_dining_table_ideas_1344x.jpg?v=1710009231",
+        "products": [
+          {
+            "id": 9,
+            "name": "Dining Table",
+            "price": 900
+          },
+          {
+            "id": 10,
+            "name": "Chesterfield Chairs",
+            "price": 500
+          }
+        ],
+        "totalCost": 1400
+      }
+    
     ]
 }

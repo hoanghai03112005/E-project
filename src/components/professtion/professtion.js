@@ -23,7 +23,7 @@ export default function Professional() {
                                             <div class="image-cover" style={{ paddingTop: "50%" }}>
 
                                                 <a href="" class="plain" aria-label="Xưởng sản xuất nội thất gỗ công nghiệp uy tín tại Hà Nội &#8211; Sản xuất theo mọi yêu cầu">
-                                                    <img src="	https://jysk.vn/data/sites/1/skins/default/img/logo.png" style={{ height: "250px", width: "250px" }}></img>
+                                                   <div> <img src="img/logo2.jpg" style={{ height: "250px", width: "250px" }}/></div>
                                                 </a>
                                             </div>
                                         </div><br />
@@ -50,7 +50,7 @@ export default function Professional() {
                                             <div class="image-cover" style={{ paddingTop: "50%" }}>
 
                                                 <a href="" class="plain" aria-label="Xưởng sản xuất nội thất gỗ công nghiệp uy tín tại Hà Nội &#8211; Sản xuất theo mọi yêu cầu">
-                                                    <img src="https://nhaxinh.com/wp-content/uploads/2021/09/logo.png" style={{ height: "250px", width: "250px" }}></img>
+                                                    <img src="img/logo4.jpg" style={{ height: "250px", width: "250px" }}></img>
                                                 </a>
                                             </div>
                                         </div><br />
@@ -76,7 +76,7 @@ export default function Professional() {
                                             <div class="image-cover" style={{ paddingTop: "50%" }}>
 
                                                 <a href="" class="plain" aria-label="Xưởng sản xuất nội thất gỗ công nghiệp uy tín tại Hà Nội &#8211; Sản xuất theo mọi yêu cầu">
-                                                    <img src="https://indexlivingmallvn.com/media/logo/stores/2/logo-2x.png" style={{ height: "250px", width: "250px" }}></img>
+                                                    <img src="img/logo3.jpg" style={{ height: "250px", width: "250px" }}></img>
                                                 </a>
                                             </div>
                                         </div><br />
@@ -106,7 +106,7 @@ export default function Professional() {
                                             <div class="image-cover" style={{ paddingTop: "20%" }}>
 
                                                 <a href="" class="plain" aria-label="Xưởng sản xuất nội thất gỗ công nghiệp uy tín tại Hà Nội &#8211; Sản xuất theo mọi yêu cầu">
-                                                    <img src="	https://theme.hstatic.net/200000065946/1001264503/14/logo.png?v=339" style={{ height: "250px", width: "250px" }}></img>
+                                                    <img src="img/logo5.jpg" style={{ height: "250px", width: "250px" }}></img>
                                                 </a>
                                             </div>
                                         </div><br />
@@ -132,7 +132,7 @@ export default function Professional() {
                                             <div class="image-cover" style={{ paddingTop: "20%" }}>
 
                                                 <a href="" class="plain" aria-label="Xưởng sản xuất nội thất gỗ công nghiệp uy tín tại Hà Nội &#8211; Sản xuất theo mọi yêu cầu">
-                                                    <img src="	https://hungtuy.com.vn/mediacenter/media/images/1498/logo/hungtuylogo-1638409932.png" style={{ height: "250px", width: "250px" }}></img>
+                                                    <img src="img/logo6.jpg" style={{ height: "250px", width: "250px" }}></img>
                                                 </a>
                                             </div>
                                         </div><br />
@@ -158,7 +158,7 @@ export default function Professional() {
                                             <div class="image-cover" style={{ paddingTop: "20%" }}>
 
                                                 <a href="" class="plain" aria-label="Xưởng sản xuất nội thất gỗ công nghiệp uy tín tại Hà Nội &#8211; Sản xuất theo mọi yêu cầu">
-                                                    <img src="	https://vuongquocnoithat.vn/images/2019/02/18/0-0-0-logo1111.png" style={{ height: "250px", width: "250px" }}></img>
+                                                    <img src="img/logo7.jpg" style={{ height: "250px", width: "250px" }}></img>
                                                 </a>
                                             </div>
                                         </div><br />

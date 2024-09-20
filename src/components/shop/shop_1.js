@@ -31,7 +31,7 @@ export default function Shop_1() {
                 }));
                 setCats(transformedCategories);
 
-                
+
 
                 // Fetch sản phẩm
                 const res = await fetch(`http://localhost:3001/products?_sort=${sortOrder}`);
@@ -114,36 +114,39 @@ export default function Shop_1() {
         setCurrentPage(selected);
     };
 
+    const generateRandomDiscount = () => {
+        return Math.floor(Math.random() * 40) + 1; // Giá trị từ 1 đến 100
+    };
+
     return (
         <>
             <div className="container-fluid fruite py-5">
-                <div className="container py-5">
-                    <h1 className="mb-4">Fresh fruits shop</h1>
-                    <div className="row g-4">
+                <div className="container py-6">
+                    <div className="row g-4 py-6">
                         <div className="col-lg-12">
                             <div className="row g-4">
                                 <div className="col-xl-3">
-                                    <form className="input-group w-100 mx-auto d-flex" onSubmit={event => {
+                                    <form className="input-group w-100 mx-auto d-flex py-6" onSubmit={event => {
                                         event.preventDefault();
                                         const keyword = event.target.keyword.value;
                                         localStorage.setItem('searchKeyword', keyword);
                                         navigate(`/search?query=${encodeURIComponent(keyword)}`, { replace: true });
                                     }}>
-                                        <input type="text" className="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1" name="keyword" />
-                                        <button id="search-icon-1" className="input-group-text p-3"><i className="fa fa-search"></i></button>
+                                        <input type="text" className="form-control" placeholder="Search" aria-describedby="search-icon-1" name="keyword" />
+                                        <button id="search-icon-1" className="btn-dark input-group-text p-3 text-white "><i className="fa fa-search"></i></button>
                                     </form>
                                 </div>
                                 <div className="col-6"></div>
-                                <div className="col-xl-3">
+                                <div className="col-xl-3 py-6">
                                     <form className="bg-white ps-3 border-2 py-3 rounded d-flex justify-content-between mb-4" onChange={handleSortChange}>
                                         <label htmlFor="fruits">Showing:</label>
-                                    <select id="fruits" name="fruitlist" className="border-0 form-select-sm bg-light me-3">
-                                        <option value="">Default</option>
-                                        <option value="-price">Price (High to Low)</option>
-                                        <option value="price">Price (Low to High)</option>
-                                        <option value="name">Name (A to Z)</option>
-                                        <option value="-name">Name (Z to A)</option>
-                                    </select>
+                                        <select id="fruits" name="fruitlist" className="border-0 form-select-sm bg-light me-3">
+                                            <option value="">Default</option>
+                                            <option value="-price">Price (High to Low)</option>
+                                            <option value="price">Price (Low to High)</option>
+                                            <option value="name">Name (A to Z)</option>
+                                            <option value="-name">Name (Z to A)</option>
+                                        </select>
                                     </form>
                                 </div>
                             </div>
@@ -156,7 +159,7 @@ export default function Shop_1() {
                                                 <ul className="list-unstyled fruite-categorie">
                                                     <li>
                                                         <div onClick={() => handleCategoryClick("All")} className="d-flex justify-content-between fruite-name">
-                                                            <a href="#"><i className="fas fa-apple-alt me-2"></i>All</a>
+                                                            <Link onClick={() => handleCategoryClick("All")} className="text-dark tw-bold">All</Link>
                                                         </div>
                                                     </li>
                                                     {cats.map((item, index) => (
@@ -165,13 +168,14 @@ export default function Shop_1() {
                                                                 onClick={() => handleCategoryClick(item.name)}
                                                                 className="d-flex justify-content-between fruite-name"
                                                             >
-                                                                <a href="#"><i className="fas fa-apple-alt me-2"></i>{item.name}</a>
+                                                                <Link onClick={() => handleCategoryClick(item.name)} className="text-dark">{item.name}</Link>
+                                                                <i class="bi bi-caret-down-fill"></i>
                                                             </div>
                                                             {openCategory === item.name && (
                                                                 <ul className="list-unstyled ps-4">
                                                                     {item.products.map(product => (
-                                                                        <li key={product.id}>
-                                                                            <a href="#" onClick={() => handleSubCategoryClick(product.name)}>{product.name}</a>
+                                                                        <li className="d-flex justify-content-start" key={product.id}>
+                                                                            <Link className="text-dark" onClick={() => handleSubCategoryClick(product.name)}>{product.name}</Link>
                                                                         </li>
                                                                     ))}
                                                                 </ul>
@@ -192,7 +196,7 @@ export default function Shop_1() {
                                                     <div className="fruite-img">
                                                         <Link to={`http://localhost:3000/shop-detail/${item.id}`}><img src={item.img} className="img w-100 rounded-top" alt="" /></Link>
                                                     </div>
-                                                    <div className="text-white bg-danger px-3 py-1 rounded position-absolute" style={{ top: '10px', left: '10px' }}>Sale 15%</div>
+                                                    <div className="text-white bg-danger px-3 py-1 rounded position-absolute" style={{ top: '10px', left: '10px' }}>Sale {generateRandomDiscount()}%</div>
                                                     <div className="p-4 border border-secondary border-top-0 rounded-bottom">
                                                         <h4>{item.name}</h4>
                                                         <p className="text-truncate">{item.description}</p>
@@ -204,26 +208,28 @@ export default function Shop_1() {
                                                 </div>
                                             </div>
                                         ))}
-                                        <nav aria-label="Page navigation example">
-                                            <ReactPaginate
-                                                breakLabel="..."
-                                                nextLabel=">"
-                                                onPageChange={handlePageClick}
-                                                pageRangeDisplayed={5}
-                                                pageCount={totalProduct}
-                                                previousLabel="<"
-                                                pageClassName="page-item"
-                                                pageLinkClassName="page-link bg-dark border-white text-white"
-                                                previousClassName="page-item"
-                                                previousLinkClassName="page-link bg-dark border-white text-white"
-                                                nextClassName="page-item"
-                                                nextLinkClassName="page-link bg-dark border-white text-white"
-                                                breakClassName="page-item"
-                                                breakLinkClassName="page-link"
-                                                containerClassName="pagination"
-                                                activeClassName="active"
-                                            />
-                                        </nav>
+                                        <div className="d-flex justify-content-center">
+                                            <nav aria-label="Page navigation example">
+                                                <ReactPaginate
+                                                    breakLabel="..."
+                                                    nextLabel=">"
+                                                    onPageChange={handlePageClick}
+                                                    pageRangeDisplayed={5}
+                                                    pageCount={totalProduct}
+                                                    previousLabel="<"
+                                                    pageClassName="page-item"
+                                                    pageLinkClassName="page-link bg-dark border-white text-white"
+                                                    previousClassName="page-item"
+                                                    previousLinkClassName="page-link bg-dark border-white text-white"
+                                                    nextClassName="page-item"
+                                                    nextLinkClassName="page-link bg-dark border-white text-white"
+                                                    breakClassName="page-item"
+                                                    breakLinkClassName="page-link bg-dark border-white text-white"
+                                                    containerClassName="pagination"
+                                                    activeClassName="active"
+                                                />
+                                            </nav>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

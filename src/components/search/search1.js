@@ -1,187 +1,118 @@
-import { useParams } from "react-router-dom"
-import Search2 from "./search2"
-import { useEffect, useState } from "react"
-import {useNavigate} from 'react-router-dom';
+import { useParams } from "react-router-dom";
+import Search2 from "./search2";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-export default function Search1() {
-    const {name} = useParams()
-    const [cats, setCats] = useState([]);
-   const navigate = useNavigate()
 
-    const fetchData = async function () {
-        var res = await fetch('http://localhost:3001/Fruits')
-        var data = await res.json()
-        const uniqueCategory = [...new Set(data.map(fruit => fruit.category))];
-        setCats(uniqueCategory);
-    }
+export default function Search1() {
+    const { name } = useParams();
+    const [cats, setCats] = useState([]);
+    const [selectedCategory, setSelectedCategory] = useState("All");
+    const [openCategory, setOpenCategory] = useState(null);
+    const navigate = useNavigate();
+    const [sortOrder, setSortOrder] = useState("");
+
+    const fetchData = async () => {
+        const categoriesRes = await fetch('http://localhost:3001/categories');
+        const categoriesData = await categoriesRes.json();
+
+        const transformedCategories = Object.keys(categoriesData).map(categoryKey => ({
+            name: categoryKey,
+            products: categoriesData[categoryKey]
+        }));
+        setCats(transformedCategories);
+    };
+
+    const handleSortChange = (event) => {
+        setSortOrder(event.target.value);
+    };
 
     useEffect(() => {
         fetchData();
     }, []);
-    
+
     const handleCategoryClick = (category) => {
-        const searchKeyword = localStorage.getItem('searchKeyword') || '';
-        navigate(`/search?query=${encodeURIComponent(searchKeyword)}&category=${encodeURIComponent(category)}`);
+        if (category === "All") {
+            setSelectedCategory("All");
+            const searchKeyword = localStorage.getItem('searchKeyword') || '';
+            navigate(`/search?query=${encodeURIComponent(searchKeyword)}`);
+        } else {
+            setOpenCategory(openCategory === category ? null : category);
+            setSelectedCategory("All");
+        }
     };
-   
-    
+
+    const handleSubCategoryClick = (subCategoryId) => {
+        const searchKeyword = localStorage.getItem('searchKeyword') || '';
+        navigate(`/search?query=${encodeURIComponent(searchKeyword)}&category=${subCategoryId}`);
+    };
 
     return (
         <>
-        
-        <div class="container-fluid fruite py-5">
-            <div class="container py-5">
-                <h1 class="mb-4">Fresh fruits shop</h1>
-                <div class="row g-4">
-                    <div class="col-lg-12">
-                        <div class="row g-4">
-                           
-                            <div class="col-6"></div>
-                            <div class="col-xl-3">
-                                
+            <div className="container-fluid fruite py-5">
+                <div className="container py-5">
+                    <div className="row g-4 py-6">
+                        <div className="col-lg-12 py-6">
+                            <div className="row g-4">
+                                <div className="col-xl-3">
+                                    <form className="input-group w-100 mx-auto d-flex" onSubmit={event => {
+                                        event.preventDefault();
+                                        const keyword = event.target.keyword.value;
+                                        localStorage.setItem('searchKeyword', keyword);
+                                        navigate(`/search?query=${encodeURIComponent(keyword)}`, { replace: true });
+                                    }}>
+                                        <input type="text" className="form-control" placeholder="Search" aria-describedby="search-icon-1" name="keyword" />
+                                        <button id="search-icon-1" className="btn-dark input-group-text p-3 text-white "><i className="fa fa-search"></i></button>
+                                    </form>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row g-4">
-                            <div class="col-lg-3">
-                                <div class="row g-4">
-                                    <div class="col-lg-12">
-                                        <div class="mb-3">
-                                            <h4>Categories</h4>
-                                            <ul class="list-unstyled fruite-categorie">
-                                            <li>
-                                                        <div onClick={() => handleCategoryClick("")} className="d-flex justify-content-between fruite-name">
-                                                            <a href="#"><i className="fas fa-apple-alt me-2"></i>All</a>
+                            <div className="row g-4">
+                                <div className="col-lg-3">
+                                    <div className="row g-4">
+                                        <div className="col-lg-12">
+                                            <div className="mb-3 py-5">
+                                                <h4>Categories</h4>
+                                                <ul className="list-unstyled fruite-categorie">
+                                                    <li>
+                                                        <div onClick={() => handleCategoryClick("All")} className="d-flex justify-content-between fruite-name">
+                                                            <Link onClick={() => handleCategoryClick("All")} className="text-dark tw-bold">All</Link>
                                                         </div>
                                                     </li>
                                                     {cats.map((item, index) => (
                                                         <li key={index}>
-                                                            <div className="d-flex justify-content-between fruite-name" onClick={() => handleCategoryClick(item)}>
-                                                                <a href="#"><i className="fas fa-apple-alt me-2"></i>{item}</a>
+                                                            <div
+                                                                onClick={() => handleCategoryClick(item.name)}
+                                                                className="d-flex justify-content-between fruite-name"
+                                                            >
+                                                                <Link onClick={() => handleCategoryClick(item.name)} className="text-dark">{item.name}</Link>
+                                                                <i class="bi bi-caret-down-fill"></i>
                                                             </div>
+                                                            {openCategory === item.name && (
+                                                                <ul className="list-unstyled ps-4">
+                                                                    {item.products.map(product => (
+                                                                        <li className="d-flex justify-content-start" key={product.id}>
+                                                                            <Link className="text-dark" onClick={() => handleSubCategoryClick(product.name)}>{product.name}</Link>
+                                                                        </li>
+                                                                    ))}
+                                                                </ul>
+                                                            )}
                                                         </li>
                                                     ))}
-                                                
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="mb-3">
-                                            <h4 class="mb-2">Price</h4>
-                                            <input type="range" class="form-range w-100" id="rangeInput" name="rangeInput" min="0" max="500" value="0" oninput="amount.value=rangeInput.value" />
-                                            <output id="amount" name="amount" min-velue="0" max-value="500" for="rangeInput">0</output>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="mb-3">
-                                            <h4>Additional</h4>
-                                            <div class="mb-2">
-                                                <input type="radio" class="me-2" id="Categories-1" name="Categories-1" value="Beverages" />
-                                                <label for="Categories-1"> Organic</label>
-                                            </div>
-                                            <div class="mb-2">
-                                                <input type="radio" class="me-2" id="Categories-2" name="Categories-1" value="Beverages" />
-                                                <label for="Categories-2"> Fresh</label>
-                                            </div>
-                                            <div class="mb-2">
-                                                <input type="radio" class="me-2" id="Categories-3" name="Categories-1" value="Beverages" />
-                                                <label for="Categories-3"> Sales</label>
-                                            </div>
-                                            <div class="mb-2">
-                                                <input type="radio" class="me-2" id="Categories-4" name="Categories-1" value="Beverages" />
-                                                <label for="Categories-4"> Discount</label>
-                                            </div>
-                                            <div class="mb-2">
-                                                <input type="radio" class="me-2" id="Categories-5" name="Categories-1" value="Beverages" />
-                                                <label for="Categories-5"> Expired</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <h4 class="mb-3">Featured products</h4>
-                                        <div class="d-flex align-items-center justify-content-start">
-                                            <div class="rounded me-4" style={{width:' 100px', height: '100px'}}>
-                                                <img src="img/featur-1.jpg" class="img-fluid rounded" alt="" />
-                                            </div>
-                                            <div>
-                                                <h6 class="mb-2">Big Banana</h6>
-                                                <div class="d-flex mb-2">
-                                                    <i class="fa fa-star text-secondary"></i>
-                                                    <i class="fa fa-star text-secondary"></i>
-                                                    <i class="fa fa-star text-secondary"></i>
-                                                    <i class="fa fa-star text-secondary"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </div>
-                                                <div class="d-flex mb-2">
-                                                    <h5 class="fw-bold me-2">2.99 $</h5>
-                                                    <h5 class="text-danger text-decoration-line-through">4.11 $</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-start">
-                                            <div class="rounded me-4" style={{width: '100px', height: '100px'}}>
-                                                <img src="img/featur-2.jpg" class="img-fluid rounded" alt="" />
-                                            </div>
-                                            <div>
-                                                <h6 class="mb-2">Big Banana</h6>
-                                                <div class="d-flex mb-2">
-                                                    <i class="fa fa-star text-secondary"></i>
-                                                    <i class="fa fa-star text-secondary"></i>
-                                                    <i class="fa fa-star text-secondary"></i>
-                                                    <i class="fa fa-star text-secondary"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </div>
-                                                <div class="d-flex mb-2">
-                                                    <h5 class="fw-bold me-2">2.99 $</h5>
-                                                    <h5 class="text-danger text-decoration-line-through">4.11 $</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-start">
-                                            <div class="rounded me-4" style={{width: '100px', height: '100px'}}>
-                                                <img src="img/featur-3.jpg" class="img-fluid rounded" alt="" />
-                                            </div>
-                                            <div>
-                                                <h6 class="mb-2">Big Banana</h6>
-                                                <div class="d-flex mb-2">
-                                                    <i class="fa fa-star text-secondary"></i>
-                                                    <i class="fa fa-star text-secondary"></i>
-                                                    <i class="fa fa-star text-secondary"></i>
-                                                    <i class="fa fa-star text-secondary"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </div>
-                                                <div class="d-flex mb-2">
-                                                    <h5 class="fw-bold me-2">2.99 $</h5>
-                                                    <h5 class="text-danger text-decoration-line-through">4.11 $</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex justify-content-center my-4">
-                                            <a href="#" class="btn border border-secondary px-4 py-3 rounded-pill text-primary w-100">View More</a>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="position-relative">
-                                            <img src="img/banner-fruits.jpg" class="img-fluid w-100 rounded" alt="" />
-                                            <div class="position-absolute" style={{top: '50%', right: '10px', transform: 'translateY(-50%)'}}>
-                                                <h3 class="text-secondary fw-bold">Fresh Fruits <br /> Banner</h3>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-9">
-                                <div class="row g-4 justify-content-center">
-                                    <Search2 name={name} />
+                                <div className="col-lg-9">
+                                    <div className="row g-4 justify-content-center">
+                                        <Search2 name={name} />
+                                    </div>
                                 </div>
-                            
                             </div>
-                            </div>
-                            </div>
-                            </div>
-                            </div>
-                            </div>
-
-                            
+                        </div>
+                    </div>
+                </div>
+            </div>
         </>
-    )
+    );
 }
