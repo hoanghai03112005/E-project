@@ -63,11 +63,11 @@ export default function Gallery() {
                         <div className="col-lg-12">
                             <div className="row g-4">
                                 <div className="col-xl-3">
-                                    
+
                                 </div>
                                 <div className="col-6"></div>
                                 <div className="col-xl-3">
-                                    
+
                                 </div>
                             </div>
                             <div className="row g-4">
@@ -76,21 +76,20 @@ export default function Gallery() {
                                         <div className="col-lg-12">
                                             <div className="mb-3">
                                                 <h4 className="text-right">Products Categories</h4>
-                                                <ul className="list-unstyled">
+                                                <ul className="list-unstyled fruite-categorie">
                                                     <li>
-                                                    <div onClick={() => handleCategoryClick("All")} className="d-flex justify-content-between fruite-name">
+                                                        <div onClick={() => handleCategoryClick("All")} className="d-flex justify-content-between fruite-name">
                                                             <Link onClick={() => handleCategoryClick("All")} className="text-dark tw-bold">All</Link>
                                                         </div>
                                                     </li>
                                                     {cats.map((item, index) => (
                                                         <li key={index}>
-                                                        <div
-                                                            onClick={() => handleCategoryClick(item)}
-                                                            className="d-flex justify-content-between fruite-name"
-                                                        >
-                                                            <Link onClick={() => handleCategoryClick(item)} className="text-dark">{item}</Link>
-                                                            
-                                                        </div>
+                                                            <div
+                                                                onClick={() => handleCategoryClick(item)}
+                                                                className="d-flex justify-content-between fruite-name"
+                                                            >
+                                                                <Link onClick={() => handleCategoryClick(item)} className="text-dark">{item}</Link>
+                                                            </div>
                                                         </li>
                                                     ))}
                                                 </ul>
@@ -106,7 +105,7 @@ export default function Gallery() {
                                                     <div className="fruite-img">
                                                         <Link to={`http://localhost:3000/shop-detail/${item.id}`}><img src={item.img} className="img w-100 rounded-top" alt="" /></Link>
                                                     </div>
-                                                    <div className="text-white bg-dark px-3 py-1 rounded position-absolute" style={{ top: '10px', left: '10px' }}>Sale 15%</div>
+                                                    <div className="text-white bg-danger px-3 py-1 rounded position-absolute" style={{ top: '10px', left: '10px' }}>Sale 15%</div>
                                                     <div className="p-4 border border-secondary border-top-0 rounded-bottom">
                                                         <h4>{item.name}</h4>
                                                         <p className="text-truncate">{item.description}</p>

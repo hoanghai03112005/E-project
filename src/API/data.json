@@ -426,6 +426,7 @@
         "name": "Contemporary Living Room",
         "category": "Living Room",
         "style": "Contemporary",
+        "price": 12000,
         "description": "A modern living room with clean lines and neutral colors.",
         "img": "https://www.decorilla.com/online-decorating/wp-content/uploads/2024/01/Modern-living-room-with-colorful-decorating-by-Decorilla-scaled.jpeg",
         "products": [
@@ -447,6 +448,7 @@
         "name": "Elegant Kitchen",
         "category": "Kitchen",
         "style": "Elegant",
+        "price": 25000,
         "description": "An elegant kitchen with marble countertops and stainless steel appliances.",
         "img": "https://elegantkd.com/wp-content/uploads/2024/01/image.jpg",
         "products": [
@@ -467,6 +469,7 @@
         "id": 3,
         "name": "Rustic Bedroom",
         "category": "Bedroom",
+        "price": 5000,
         "style": "Rustic",
         "description": "A cozy bedroom with wooden furniture and warm colors.",
         "img": "https://www.coasterfurniture.com/wp-content/uploads/bedroom-with-a-large-bed-and-a-big-window.jpg",
@@ -490,6 +493,7 @@
         "id": 4,
         "name": "Modern Office",
         "category": "Office",
+        "price": 6000,
         "style": "Modern",
         "description": "A sleek office space with ergonomic furniture and smart lighting.",
         "img": "https://www.winnershtriangle.co.uk/wp-content/uploads/2023/06/WT-banner.jpg",
@@ -512,6 +516,7 @@
         "id": 5,
         "name": "Scandinavian Dining Room",
         "category": "Dining Room",
+        "price": 18000,
         "style": "Scandinavian",
         "description": "A bright dining room with minimalist furniture and natural materials.",
         "img": "https://mojoboutique.com/cdn/shop/articles/scandinavian_dining_table_ideas_1344x.jpg?v=1710009231",
@@ -533,6 +538,7 @@
         "id": 6,
         "name": "Industrial Loft",
         "category": "Living Room",
+        "price": 3600,
         "style": "Industrial",
         "description": "An open-concept loft with exposed brick walls and metal fixtures.",
         "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuCnNRrlfIxKtvn7DTvTSZV8_aU-dKscaWHw&s",
@@ -548,7 +554,50 @@
             "price": 300
           }
         ]
-        
+      },
+      {
+        "id": 7,
+        "name": "Scandinavian Dining Room",
+        "category": "Dining Room",
+        "price": 18000,
+        "style": "Scandinavian",
+        "description": "A bright dining room with minimalist furniture and natural materials.",
+        "img": "https://mojoboutique.com/cdn/shop/articles/scandinavian_dining_table_ideas_1344x.jpg?v=1710009231",
+        "products": [
+          {
+            "id": 9,
+            "name": "Dining Table",
+            "price": 900
+          },
+          {
+            "id": 10,
+            "name": "Chesterfield Chairs",
+            "price": 500
+          }
+        ],
+        "totalCost": 1400
+      },
+      {
+        "id": 8,
+        "name": "Scandinavian Dining Room",
+        "category": "Dining Room",
+        "price": 18000,
+        "style": "Scandinavian",
+        "description": "A bright dining room with minimalist furniture and natural materials.",
+        "img": "https://mojoboutique.com/cdn/shop/articles/scandinavian_dining_table_ideas_1344x.jpg?v=1710009231",
+        "products": [
+          {
+            "id": 9,
+            "name": "Dining Table",
+            "price": 900
+          },
+          {
+            "id": 10,
+            "name": "Chesterfield Chairs",
+            "price": 500
+          }
+        ],
+        "totalCost": 1400
       }
     
     ]
