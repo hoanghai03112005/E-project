@@ -6,12 +6,12 @@ export default function Home_6() { //Fact
                     <div class="row g-5 align-items-center">
                         <h1>Categories Products</h1>
                         <div class="col-md-12 col-lg-6">
-                            <img src="img/homeImage/banner1.jpg" class="img-fluid w-100 h-150 bg-secondary rounded" />
+                            <img src="img/homeImage/banner3.jpg" class="img-fluid w-100 h-150 bg-secondary rounded" />
                         </div>
                         <div class="col-md-12 col-lg-6">
                             <div class="row g-3 py-5">
                                 <div class="col-md-12 col-lg-6" style={{ position: 'relative' }}>
-                                    <img src="img/homeImage/banner3.webp" class="img w-100  bg-secondary rounded" />
+                                    <img src="img/homeImage/banner2.jpg" class="img w-100  bg-secondary rounded" />
                                     <h3 style={{ position: 'absolute', color: '#fff', left: '25%', top: '50%', fontWeight: 'bold' }}>Living Room
                                     </h3>
                                 </div>

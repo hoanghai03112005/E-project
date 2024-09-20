@@ -13,8 +13,8 @@ export default function Navbar() {
                     </div>
                     <div class="top-link pe-2">
                         <a href="#" class="text-white"><small class="text-white mx-2">Privacy Policy</small>/</a>
-                        <a href="#" class="text-white"><small class="text-white mx-2">Terms of Use</small>/</a>
-                        <a href="#" class="text-white"><small class="text-white ms-2">Sales and Refunds</small></a>
+                        <a href="#" class="text-white"><small class="text-white mx-2">Your Account</small>/</a>
+                        <a href="#" class="text-white"><small class="text-white ms-2">Cart</small></a>
                     </div>
                 </div>
             </div>
