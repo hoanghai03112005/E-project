@@ -32,18 +32,18 @@ export default function footer() {
                                 <h4 class="text-light mb-3">Why People Like us!</h4>
                                 <p class="mb-4">typesetting, remaining essentially unchanged. It was
                                     popularised in the 1960s with the like Aldus PageMaker including of Lorem Ipsum.</p>
-                                <a href="" class="btn border-white py-2 px-4 rounded-pill text-white">Read More</a>
+                                <a href="/about" class="btn border-white py-2 px-4 rounded-pill text-white">Read More</a>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6">
                             <div class="d-flex flex-column text-start footer-item">
-                                <h4 class="text-light mb-3"  href="/">Home</h4>
+                                <h4 class="text-light mb-3" href="/">Home</h4>
                                 <a class="btn-link" href="/professtion">Professional Interior</a>
                                 <a class="btn-link" href="/designers-gallery">Designers Gallery</a>
                                 <a class="btn-link" href="/shop">Products</a>
                                 <a class="btn-link" href="/contact">Contact Us</a>
-                                <a class="btn-link" href="/about">About Us</a>                       
-                                <a class="btn-link" href="/about">Feedback</a>                                                                                          
+                                <a class="btn-link" href="/about">About Us</a>
+                                <a class="btn-link" href="/about">Feedback</a>
 
                             </div>
                         </div>
@@ -61,9 +61,9 @@ export default function footer() {
                         <div class="col-lg-3 col-md-6">
                             <div class="footer-item">
                                 <h4 class="text-light mb-3">Contact</h4>
-                                <p>Address: 1429 Netus Rd, NY 48247</p>
-                                <p>Email: Example@gmail.com</p>
-                                <p>Phone: +0123 4567 8910</p>
+                                <p>Address: HTC Building, 250 Hoang Quoc Viet, Co Nhue, Cau Giay, Hanoi, Vietnam</p>
+                                <p>Email: info@example.com</p>
+                                <p>Phone: (+012) 3456 7890</p>
                                 <p>Payment Accepted</p>
                                 <img src="img/payment.png" class="img" alt="" />
                             </div>
@@ -71,7 +71,6 @@ export default function footer() {
                     </div>
                 </div>
             </div>
-
         </>
     )
 }
