@@ -6,7 +6,7 @@ export default function Home_4() { //Banner Section
                     <div class="row g-4 align-items-center">
                         <h1 className="tw-bold">Design Interior</h1>
                         <div class="col-lg-7">
-                            <a href="">
+                            <a href="/shop">
                                 <img src="img/homeImage/sofa1.jpg" class="img-fluid w-100 rounded-top" alt="" />
                                 <div class="px-6 py-0">
                                     <div class="service-content bg-dark text-center p-4 rounded-bottom py-12">
@@ -17,7 +17,7 @@ export default function Home_4() { //Banner Section
                             </a>
                         </div>
                         <div class="col-lg-5">
-                            <a href="">
+                            <a href="/shop">
                                 <div class="px-6 py-0">
                                     <div class="service-content bg-dark text-center p-4 rounded-top">
                                         <h5 class="text-white">Bedroom Furniture</h5>
@@ -28,7 +28,7 @@ export default function Home_4() { //Banner Section
                             </a>
                         </div>
                         <div class="col-lg-5">
-                            <a href="">
+                            <a href="/shop">
                                 <div class="px-6 py-0">
                                     <div class="service-content bg-dark text-center p-4 rounded-top">
                                         <h5 class="text-white">Kitchen Furniture</h5>
@@ -40,7 +40,7 @@ export default function Home_4() { //Banner Section
                         </div>
 
                         <div class="col-lg-7">
-                            <a href="">
+                            <a href="/shop">
                                 <img src="img/homeImage/bookcase1.jpg" class="img-fluid w-100 rounded-top" alt="" />
                                 <div class="px-6 py-0">
                                     <div class="service-content bg-dark text-center p-4 rounded-bottom">

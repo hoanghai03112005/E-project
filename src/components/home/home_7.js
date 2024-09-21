@@ -11,7 +11,7 @@ export default function Home_7() { //Fact
                                 <h4>Armchair Doulton vintage</h4>
                                 <p class="text-truncate">Lorem ipsum dolor sit amet consectetur</p>
                                 <div class="d-flex justify-content-center flex-lg-wrap">
-                                    <p class="text-dark fs-5 fw-bold mb-0">$1200</p>
+                                    <p class="text-dark fs-5 fw-bold mb-0 py-3">$1200</p>
                                 </div>
                                 <div className="row">
                                     <div className="col-lg-6">
@@ -29,7 +29,7 @@ export default function Home_7() { //Fact
                                 <h4>Contemporary Bed Frame</h4>
                                 <p class="text-truncate">Lorem ipsum dolor sit amet consectetur</p>
                                 <div class="d-flex justify-content-center flex-lg-wrap">
-                                    <p class="text-dark fs-5 fw-bold mb-0">$25000</p>
+                                    <p class="text-dark fs-5 fw-bold mb-0 py-3">$25000</p>
                                 </div>
                                 <div className="row">
                                     <div className="col-lg-6">
@@ -47,7 +47,7 @@ export default function Home_7() { //Fact
                                 <h4>Versatile Kitchen Island</h4>
                                 <p class="text-truncate">Lorem ipsum dolor sit amet consectetur</p>
                                 <div class="d-flex justify-content-center flex-lg-wrap">
-                                    <p class="text-dark fs-5 fw-bold mb-0">$1200</p>
+                                    <p class="text-dark fs-5 fw-bold mb-0 py-3">$1200</p>
                                 </div>
                                 <div className="row">
                                     <div className="col-lg-6">
@@ -65,7 +65,7 @@ export default function Home_7() { //Fact
                                 <h4>Hung King 3-seater Sofa + Pillow</h4>
                                 <p class="text-truncate">Lorem ipsum dolor sit amet consectetur</p>
                                 <div class="d-flex justify-content-center flex-lg-wrap">
-                                    <p class="text-dark fs-5 fw-bold mb-0">$1200</p>
+                                    <p class="text-dark fs-5 fw-bold mb-0 py-3">$1200</p>
                                 </div>
                                 <div className="row">
                                     <div className="col-lg-6">
