@@ -6,7 +6,8 @@ export default function Home_6() { //Fact
                     <div class="row g-5 align-items-center">
                         <h1>Categories Products</h1>
                         <div class="col-md-12 col-lg-6">
-                            <a href="/shop">
+                            <a href="/shop" style={{ position: 'relative' }} >
+                             <h3 style={{ position: 'absolute', color: '#fff', left: '47%', top: '50%', fontWeight: 'bold' }}>Sofa</h3>
                                 <img src="img/homeImage/sofa3.jpg" class="img-fluid w-100 h-150 bg-secondary rounded" />
                             </a>
                         </div>
