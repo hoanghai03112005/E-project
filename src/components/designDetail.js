@@ -122,51 +122,51 @@ export default function DesignDetail() {
 
     return (
         <>
-            <div class="container-fluid py-5 mt-5">
-                <div class="container py-5">
-                    <div class="row g-4 mb-5">
-                        <div class="col-lg-8 col-xl-9">
-                            <div class="row g-4">
+            <div className="container-fluid py-5 mt-5">
+                <div className="container py-5">
+                    <div className="row g-4 mb-5">
+                        <div className="col-lg-8 col-xl-9">
+                            <div className="row g-4">
                                 {
                                     selectID && (
                                         <>
-                                            <div class="col-lg-6" style={{ marginTop: '100px' }}>
-                                                <div class="border rounded">
+                                            <div className="col-lg-6" style={{ marginTop: '100px' }}>
+                                                <div className="border rounded">
                                                     <Link>
-                                                        <img src={selectID.img} class="img-fluid rounded" alt="Image" />
+                                                        <img src={selectID.img} className="img-fluid rounded" alt="Image" />
                                                     </Link>
                                                 </div>
                                             </div>
 
-                                            <div class="col-lg-6 py-6" style={{ marginTop: '100px' }}>
-                                                <h4 class="fw-bold mb-3">{selectID.name}</h4>
-                                                <p class="mb-4" style={{ textAlign: 'center' }}>{selectID.description}</p>
+                                            <div className="col-lg-6 py-6" style={{ marginTop: '100px' }}>
+                                                <h4 className="fw-bold mb-3">{selectID.name}</h4>
+                                                <p className="mb-4" style={{ textAlign: 'center' }}>{selectID.description}</p>
                                                 <div className="d-flex justify-content-between py-6" >
-                                                    <h5 class="fw-bold mb-3">${selectID.price}</h5>
-                                                    <div class="d-flex mb-4 justify-content-center">
-                                                        <i class="fa fa-star text-secondary"></i>
-                                                        <i class="fa fa-star text-secondary"></i>
-                                                        <i class="fa fa-star text-secondary"></i>
-                                                        <i class="fa fa-star text-secondary"></i>
-                                                        <i class="fa fa-star"></i>
+                                                    <h5 className="fw-bold mb-3">${selectID.price}</h5>
+                                                    <div className="d-flex mb-4 justify-content-center">
+                                                        <i className="fa fa-star text-secondary"></i>
+                                                        <i className="fa fa-star text-secondary"></i>
+                                                        <i className="fa fa-star text-secondary"></i>
+                                                        <i className="fa fa-star text-secondary"></i>
+                                                        <i className="fa fa-star"></i>
                                                     </div>
                                                 </div>
 
                                                 <div className="d-flex justify-content-between">
-                                                    <div class="input-group quantity mb-5" style={{ width: '100px' }}>
-                                                        <div class="input-group-btn">
-                                                            <button class="btn btn-sm btn-minus rounded-circle bg-light border" >
-                                                                <i class="fa fa-minus text-dark"></i>
+                                                    <div className="input-group quantity mb-5" style={{ width: '100px' }}>
+                                                        <div className="input-group-btn">
+                                                            <button className="btn btn-sm btn-minus rounded-circle bg-light border" >
+                                                                <i className="fa fa-minus text-dark"></i>
                                                             </button>
                                                         </div>
-                                                        <input type="text" class="form-control form-control-sm text-center border-0" value="1" />
-                                                        <div class="input-group-btn">
-                                                            <button class="btn btn-sm btn-plus rounded-circle bg-light border">
-                                                                <i class="fa fa-plus text-dark"></i>
+                                                        <input type="text" className="form-control form-control-sm text-center border-0" value="1" />
+                                                        <div className="input-group-btn">
+                                                            <button className="btn btn-sm btn-plus rounded-circle bg-light border">
+                                                                <i className="fa fa-plus text-dark"></i>
                                                             </button>
                                                         </div>
                                                     </div>
-                                                    <Link class="btn btn-dark border border-secondary rounded-pill mb-5 text-white" style={{ marginLeft: '-310px' }}><i class="fa fa-shopping-bag me-2 text-white"></i> Add to cart</Link>
+                                                    <Link className="btn btn-dark border border-secondary rounded-pill mb-5 text-white" style={{ marginLeft: '-310px' }}><i className="fa fa-shopping-bag me-2 text-white"></i> Add to cart</Link>
                                                 </div>
 
                                             </div>
@@ -174,157 +174,157 @@ export default function DesignDetail() {
                                     )
                                 }
 
-                                <div class="col-lg-12">
+                                <div className="col-lg-12">
                                     <nav>
-                                        <div class="nav nav-tabs mb-3">
-                                            <button class="nav-link active border-white border-bottom-0" type="button" role="tab"
+                                        <div className="nav nav-tabs mb-3">
+                                            <button className="nav-link active border-white border-bottom-0" type="button" role="tab"
                                                 id="nav-about-tab" data-bs-toggle="tab" data-bs-target="#nav-about"
                                                 aria-controls="nav-about" aria-selected="true">Description</button>
-                                            <button class="nav-link border-white border-bottom-0" type="button" role="tab"
+                                            <button className="nav-link border-white border-bottom-0" type="button" role="tab"
                                                 id="nav-mission-tab" data-bs-toggle="tab" data-bs-target="#nav-mission"
                                                 aria-controls="nav-mission" aria-selected="false">Reviews</button>
                                         </div>
                                     </nav>
-                                    <div class="tab-content mb-5">
-                                        <div class="tab-pane active" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
+                                    <div className="tab-content mb-5">
+                                        <div className="tab-pane active" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
                                             <p>The generated Lorem Ipsum is therefore always free from repetition injected humour, or non-characteristic words etc.
                                                 Susp endisse ultricies nisi vel quam suscipit </p>
                                             <p>Sabertooth peacock flounder; chain pickerel hatchetfish, pencilfish snailfish filefish Antarctic
                                                 icefish goldeye aholehole trumpetfish pilot fish airbreathing catfish, electric ray sweeper.</p>
-                                            <div class="px-2">
-                                                <div class="row g-4">
-                                                    <div class="col-6">
-                                                        <div class="row bg-light align-items-center text-center justify-content-center py-2">
-                                                            <div class="col-6">
-                                                                <p class="mb-0">Weight</p>
+                                            <div className="px-2">
+                                                <div className="row g-4">
+                                                    <div className="col-6">
+                                                        <div className="row bg-light align-items-center text-center justify-content-center py-2">
+                                                            <div className="col-6">
+                                                                <p className="mb-0">Weight</p>
                                                             </div>
-                                                            <div class="col-6">
-                                                                <p class="mb-0">15 kg</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row text-center align-items-center justify-content-center py-2">
-                                                            <div class="col-6">
-                                                                <p class="mb-0">Country of Origin</p>
-                                                            </div>
-                                                            <div class="col-6">
-                                                                <p class="mb-0">China</p>
+                                                            <div className="col-6">
+                                                                <p className="mb-0">15 kg</p>
                                                             </div>
                                                         </div>
-                                                        <div class="row bg-light text-center align-items-center justify-content-center py-2">
-                                                            <div class="col-6">
-                                                                <p class="mb-0">Quality</p>
+                                                        <div className="row text-center align-items-center justify-content-center py-2">
+                                                            <div className="col-6">
+                                                                <p className="mb-0">Country of Origin</p>
                                                             </div>
-                                                            <div class="col-6">
-                                                                <p class="mb-0">Natural Woods</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row text-center align-items-center justify-content-center py-2">
-                                                            <div class="col-6">
-                                                                <p class="mb-0">Сheck</p>
-                                                            </div>
-                                                            <div class="col-6">
-                                                                <p class="mb-0">Good</p>
+                                                            <div className="col-6">
+                                                                <p className="mb-0">China</p>
                                                             </div>
                                                         </div>
-                                                        <div class="row bg-light text-center align-items-center justify-content-center py-2">
-                                                            <div class="col-6">
-                                                                <p class="mb-0">Min Weight</p>
+                                                        <div className="row bg-light text-center align-items-center justify-content-center py-2">
+                                                            <div className="col-6">
+                                                                <p className="mb-0">Quality</p>
                                                             </div>
-                                                            <div class="col-6">
-                                                                <p class="mb-0">500 Kg</p>
+                                                            <div className="col-6">
+                                                                <p className="mb-0">Natural Woods</p>
+                                                            </div>
+                                                        </div>
+                                                        <div className="row text-center align-items-center justify-content-center py-2">
+                                                            <div className="col-6">
+                                                                <p className="mb-0">Сheck</p>
+                                                            </div>
+                                                            <div className="col-6">
+                                                                <p className="mb-0">Good</p>
+                                                            </div>
+                                                        </div>
+                                                        <div className="row bg-light text-center align-items-center justify-content-center py-2">
+                                                            <div className="col-6">
+                                                                <p className="mb-0">Min Weight</p>
+                                                            </div>
+                                                            <div className="col-6">
+                                                                <p className="mb-0">500 Kg</p>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="tab-pane" id="nav-mission" role="tabpanel" aria-labelledby="nav-mission-tab">
-                                            <div class="d-flex">
-                                                <img src="/img/avatar.jpg" class="img-fluid rounded-circle p-3" style={{ width: '100px', height: '100px' }} alt="" />
-                                                <div class="">
-                                                    <p class="mb-2" style={{ fontSize: '14px' }}>April 12, 2024</p>
-                                                    <div class="d-flex justify-content-between">
+                                        <div className="tab-pane" id="nav-mission" role="tabpanel" aria-labelledby="nav-mission-tab">
+                                            <div className="d-flex">
+                                                <img src="/img/avatar.jpg" className="img-fluid rounded-circle p-3" style={{ width: '100px', height: '100px' }} alt="" />
+                                                <div className="">
+                                                    <p className="mb-2" style={{ fontSize: '14px' }}>April 12, 2024</p>
+                                                    <div className="d-flex justify-content-between">
                                                         <h5>Jason Smith</h5>
-                                                        <div class="d-flex mb-3">
-                                                            <i class="fa fa-star text-secondary"></i>
-                                                            <i class="fa fa-star text-secondary"></i>
-                                                            <i class="fa fa-star text-secondary"></i>
-                                                            <i class="fa fa-star text-secondary"></i>
-                                                            <i class="fa fa-star"></i>
+                                                        <div className="d-flex mb-3">
+                                                            <i className="fa fa-star text-secondary"></i>
+                                                            <i className="fa fa-star text-secondary"></i>
+                                                            <i className="fa fa-star text-secondary"></i>
+                                                            <i className="fa fa-star text-secondary"></i>
+                                                            <i className="fa fa-star"></i>
                                                         </div>
                                                     </div>
                                                     <p>The generated Lorem Ipsum is therefore always free from repetition injected humour, or non-characteristic
                                                         words etc. Susp endisse ultricies nisi vel quam suscipit </p>
                                                 </div>
                                             </div>
-                                            <div class="d-flex">
-                                                <img src="/img/avatar.jpg" class="img-fluid rounded-circle p-3" style={{ width: '100px', height: '100px' }} alt="" />
-                                                <div class="">
-                                                    <p class="mb-2" style={{ fontSize: '14px' }}>June 24, 2024</p>
-                                                    <div class="d-flex justify-content-between">
+                                            <div className="d-flex">
+                                                <img src="/img/avatar.jpg" className="img-fluid rounded-circle p-3" style={{ width: '100px', height: '100px' }} alt="" />
+                                                <div className="">
+                                                    <p className="mb-2" style={{ fontSize: '14px' }}>June 24, 2024</p>
+                                                    <div className="d-flex justify-content-between">
                                                         <h5>Sam Peters</h5>
-                                                        <div class="d-flex mb-3">
-                                                            <i class="fa fa-star text-secondary"></i>
-                                                            <i class="fa fa-star text-secondary"></i>
-                                                            <i class="fa fa-star text-secondary"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
+                                                        <div className="d-flex mb-3">
+                                                            <i className="fa fa-star text-secondary"></i>
+                                                            <i className="fa fa-star text-secondary"></i>
+                                                            <i className="fa fa-star text-secondary"></i>
+                                                            <i className="fa fa-star"></i>
+                                                            <i className="fa fa-star"></i>
                                                         </div>
                                                     </div>
-                                                    <p class="text-dark">The generated Lorem Ipsum is therefore always free from repetition injected humour, or non-characteristic
+                                                    <p className="text-dark">The generated Lorem Ipsum is therefore always free from repetition injected humour, or non-characteristic
                                                         words etc. Susp endisse ultricies nisi vel quam suscipit </p>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="tab-pane" id="nav-vision" role="tabpanel">
-                                            <p class="text-dark">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam
+                                        <div className="tab-pane" id="nav-vision" role="tabpanel">
+                                            <p className="text-dark">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam
                                                 amet diam et eos labore. 3</p>
-                                            <p class="mb-0">Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore.
+                                            <p className="mb-0">Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore.
                                                 Clita erat ipsum et lorem et sit</p>
                                         </div>
                                     </div>
                                 </div>
                                 <form action="#">
-                                    <h4 class="mb-5 fw-bold">Leave a Reply</h4>
-                                    <div class="row g-4">
-                                        <div class="col-lg-6">
-                                            <div class="border-bottom rounded">
-                                                <input type="text" class="form-control border-1 me-4" placeholder="Your Name *" />
+                                    <h4 className="mb-5 fw-bold">Leave a Reply</h4>
+                                    <div className="row g-4">
+                                        <div className="col-lg-6">
+                                            <div className="border-bottom rounded">
+                                                <input type="text" className="form-control border-1 me-4" placeholder="Your Name *" />
                                             </div>
                                         </div>
-                                        <div class="col-lg-6">
-                                            <div class="border-bottom rounded">
-                                                <input type="email" class="form-control border-1" placeholder="Your Email *" />
+                                        <div className="col-lg-6">
+                                            <div className="border-bottom rounded">
+                                                <input type="email" className="form-control border-1" placeholder="Your Email *" />
                                             </div>
                                         </div>
-                                        <div class="col-lg-12">
-                                            <div class="border-bottom rounded my-4">
-                                                <textarea name="" id="" class="form-control border-1" cols="30" rows="8" placeholder="Your Review *" spellcheck="false"></textarea>
+                                        <div className="col-lg-12">
+                                            <div className="border-bottom rounded my-4">
+                                                <textarea name="" id="" className="form-control border-1" cols="30" rows="8" placeholder="Your Review *" spellcheck="false"></textarea>
                                             </div>
                                         </div>
-                                        <div class="col-lg-12">
-                                            <div class="d-flex justify-content-between py-3 mb-5">
-                                                <div class="d-flex align-items-center">
-                                                    <p class="mb-0 me-3">Please rate:</p>
-                                                    <div class="d-flex align-items-center" style={{ fontSize: '12px' }}>
-                                                        <i class="fa fa-star text-muted"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
+                                        <div className="col-lg-12">
+                                            <div className="d-flex justify-content-between py-3 mb-5">
+                                                <div className="d-flex align-items-center">
+                                                    <p className="mb-0 me-3">Please rate:</p>
+                                                    <div className="d-flex align-items-center" style={{ fontSize: '12px' }}>
+                                                        <i className="fa fa-star text-muted"></i>
+                                                        <i className="fa fa-star"></i>
+                                                        <i className="fa fa-star"></i>
+                                                        <i className="fa fa-star"></i>
+                                                        <i className="fa fa-star"></i>
                                                     </div>
                                                 </div>
-                                                <a href="#" class="btn btn-dark border border-secondary text-white rounded-pill px-4 py-3"> Post Comment</a>
+                                                <a href="#" className="btn btn-dark border border-secondary text-white rounded-pill px-4 py-3"> Post Comment</a>
                                             </div>
                                         </div>
                                     </div>
                                 </form>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-xl-3 py-6">
-                            <div class="row g-4 fruite">
-                                <div class="col-lg-12">
-                                    <div class="mb-4">
+                        <div className="col-lg-4 col-xl-3 py-6">
+                            <div className="row g-4 fruite">
+                                <div className="col-lg-12">
+                                    <div className="mb-4">
                                         <h4>Categories</h4>
                                         <ul className="list-unstyled fruite-categorie">
                                             <li>
@@ -369,75 +369,75 @@ export default function DesignDetail() {
                             </div>
                         </div>
                         <h1>Room furniture products</h1>
-                        <div class="col-md-12 col-lg-3">
-                            <img src="img/product/chair2.jpg" class="img w-100 h-150 bg-secondary rounded" alt="First slide" />
-                            <div class="p-4 rounded-bottom">
+                        <div className="col-md-12 col-lg-3">
+                            <img src="img/product/chair2.jpg" className="img w-100 h-150 bg-secondary rounded" alt="First slide" />
+                            <div className="p-4 rounded-bottom">
                                 <h4>Armchair Doulton vintage</h4>
-                                <p class="text-truncate">Lorem ipsum dolor sit amet consectetur</p>
-                                <div class="d-flex justify-content-center flex-lg-wrap">
-                                    <p class="text-dark fs-5 fw-bold mb-0 py-3">$1200</p>
+                                <p className="text-truncate">Lorem ipsum dolor sit amet consectetur</p>
+                                <div className="d-flex justify-content-center flex-lg-wrap">
+                                    <p className="text-dark fs-5 fw-bold mb-0 py-3">$1200</p>
                                 </div>
                                 <div className="row">
                                     <div className="col-lg-6">
-                                        <a href="#" class="btn border border-dark bg-dark rounded px-3 text-white fs-6"><i class="bi bi-cart-fill"></i>Add</a>
+                                        <a href="#" className="btn border border-dark bg-dark rounded px-3 text-white fs-6"><i className="bi bi-cart-fill"></i>Add</a>
                                     </div>
                                     <div className="col-lg-6">
-                                        <a href="/shop" class="btn border border-dark bg-dark rounded px-3 text-white fs-6"><i class="bi bi-eye-fill"></i>View</a>
+                                        <a href="/shop" className="btn border border-dark bg-dark rounded px-3 text-white fs-6"><i className="bi bi-eye-fill"></i>View</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-12 col-lg-3">
-                            <img src="https://cdn.thewirecutter.com/wp-content/media/2022/01/bedframes-2048px-floyd-1.jpg?auto=webp&quality=75&width=1024" class="img w-100 h-150 bg-secondary rounded" alt="First slide" />
-                            <div class="p-4 rounded-bottom">
+                        <div className="col-md-12 col-lg-3">
+                            <img src="https://cdn.thewirecutter.com/wp-content/media/2022/01/bedframes-2048px-floyd-1.jpg?auto=webp&quality=75&width=1024" className="img w-100 h-150 bg-secondary rounded" alt="First slide" />
+                            <div className="p-4 rounded-bottom">
                                 <h4>Contemporary Bed Frame</h4>
-                                <p class="text-truncate">Lorem ipsum dolor sit amet consectetur</p>
-                                <div class="d-flex justify-content-center flex-lg-wrap">
-                                    <p class="text-dark fs-5 fw-bold mb-0 py-3">$25000</p>
+                                <p className="text-truncate">Lorem ipsum dolor sit amet consectetur</p>
+                                <div className="d-flex justify-content-center flex-lg-wrap">
+                                    <p className="text-dark fs-5 fw-bold mb-0 py-3">$25000</p>
                                 </div>
                                 <div className="row">
                                     <div className="col-lg-6">
-                                        <a href="#" class="btn border border-dark bg-dark rounded px-3 text-white fs-6"><i class="bi bi-cart-fill"></i>Add</a>
+                                        <a href="#" className="btn border border-dark bg-dark rounded px-3 text-white fs-6"><i className="bi bi-cart-fill"></i>Add</a>
                                     </div>
                                     <div className="col-lg-6">
-                                        <a href="/shop" class="btn border border-dark bg-dark rounded px-3 text-white fs-6"><i class="bi bi-eye-fill"></i>View</a>
+                                        <a href="/shop" className="btn border border-dark bg-dark rounded px-3 text-white fs-6"><i className="bi bi-eye-fill"></i>View</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-12 col-lg-3">
-                            <img src="https://www.thekitchenpartners.co.uk/wp-content/uploads/2023/11/Hanna-1-scaled.jpg" class="img w-100 h-150 bg-secondary rounded" alt="First slide" />
-                            <div class="p-4 rounded-bottom">
+                        <div className="col-md-12 col-lg-3">
+                            <img src="https://www.thekitchenpartners.co.uk/wp-content/uploads/2023/11/Hanna-1-scaled.jpg" className="img w-100 h-150 bg-secondary rounded" alt="First slide" />
+                            <div className="p-4 rounded-bottom">
                                 <h4>Versatile Kitchen Island</h4>
-                                <p class="text-truncate">Lorem ipsum dolor sit amet consectetur</p>
-                                <div class="d-flex justify-content-center flex-lg-wrap">
-                                    <p class="text-dark fs-5 fw-bold mb-0 py-3">$1200</p>
+                                <p className="text-truncate">Lorem ipsum dolor sit amet consectetur</p>
+                                <div className="d-flex justify-content-center flex-lg-wrap">
+                                    <p className="text-dark fs-5 fw-bold mb-0 py-3">$1200</p>
                                 </div>
                                 <div className="row">
                                     <div className="col-lg-6">
-                                        <a href="#" class="btn border border-dark bg-dark rounded px-3 text-white fs-6"><i class="bi bi-cart-fill"></i>Add</a>
+                                        <a href="#" className="btn border border-dark bg-dark rounded px-3 text-white fs-6"><i className="bi bi-cart-fill"></i>Add</a>
                                     </div>
                                     <div className="col-lg-6">
-                                        <a href="/shop" class="btn border border-dark bg-dark rounded px-3 text-white fs-6"><i class="bi bi-eye-fill"></i>View</a>
+                                        <a href="/shop" className="btn border border-dark bg-dark rounded px-3 text-white fs-6"><i className="bi bi-eye-fill"></i>View</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-12 col-lg-3">
-                            <img src="img/product/sofa1.jpg" class="img w-100 h-150 bg-secondary rounded" alt="First slide" />
-                            <div class="p-4 rounded-bottom">
+                        <div className="col-md-12 col-lg-3">
+                            <img src="img/product/sofa1.jpg" className="img w-100 h-150 bg-secondary rounded" alt="First slide" />
+                            <div className="p-4 rounded-bottom">
                                 <h4>Hung King 3-seater Sofa + Pillow</h4>
-                                <p class="text-truncate">Lorem ipsum dolor sit amet consectetur</p>
-                                <div class="d-flex justify-content-center flex-lg-wrap">
-                                    <p class="text-dark fs-5 fw-bold mb-0 py-3">$1200</p>
+                                <p className="text-truncate">Lorem ipsum dolor sit amet consectetur</p>
+                                <div className="d-flex justify-content-center flex-lg-wrap">
+                                    <p className="text-dark fs-5 fw-bold mb-0 py-3">$1200</p>
                                 </div>
                                 <div className="row">
                                     <div className="col-lg-6">
-                                        <a href="#" class="btn border border-dark bg-dark rounded px-3 text-white fs-6"><i class="bi bi-cart-fill"></i>Add</a>
+                                        <a href="#" className="btn border border-dark bg-dark rounded px-3 text-white fs-6"><i className="bi bi-cart-fill"></i>Add</a>
                                     </div>
                                     <div className="col-lg-6">
 
-                                        <a href="/shop" class="btn border border-dark bg-dark rounded px-3 text-white fs-6"><i class="bi bi-eye-fill"></i>View</a>
+                                        <a href="/shop" className="btn border border-dark bg-dark rounded px-3 text-white fs-6"><i className="bi bi-eye-fill"></i>View</a>
                                     </div>
                                 </div>
                             </div>

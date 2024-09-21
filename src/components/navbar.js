@@ -4,35 +4,35 @@ import { Link } from "react-router-dom"
 
 export default function Navbar() {
     return (
-        <div class="container-fluid fixed-top">
-            <div class="container topbar bg-dark d-none d-lg-block">
-                <div class="d-flex justify-content-between">
-                    <div class="top-info ps-2">
-                        <small class="me-3"><i class="fas fa-map-marker-alt me-2 text-white"></i> <a href="#" class="text-white text-truncate">HTC Building, 250 Hoang Quoc Viet, Co Nhue, Cau Giay, Hanoi, Vietnam</a></small>
-                        <small class="me-3"><i class="fas fa-envelope me-2 text-white"></i><a href="#" class="text-white">info@example.com</a></small>
+        <div className="container-fluid fixed-top">
+            <div className="container topbar bg-dark d-none d-lg-block">
+                <div className="d-flex justify-content-between">
+                    <div className="top-info ps-2">
+                        <small className="me-3"><i className="fas fa-map-marker-alt me-2 text-white"></i> <a href="#" className="text-white text-truncate">HTC Building, 250 Hoang Quoc Viet, Co Nhue, Cau Giay, Hanoi, Vietnam</a></small>
+                        <small className="me-3"><i className="fas fa-envelope me-2 text-white"></i><a href="#" className="text-white">info@example.com</a></small>
                     </div>
-                    <div class="top-link pe-2">
-                        <a href="#" class="text-white"><small class="text-white mx-2">Privacy Policy</small>/</a>
-                        <a href="#" class="text-white"><small class="text-white mx-2">Your Account</small>/</a>
-                        <a href="#" class="text-white"><small class="text-white ms-2">Cart</small></a>
+                    <div className="top-link pe-2">
+                        <a href="#" className="text-white"><small className="text-white mx-2">Privacy Policy</small>/</a>
+                        <a href="#" className="text-white"><small className="text-white mx-2">Your Account</small>/</a>
+                        <a href="#" className="text-white"><small className="text-white ms-2">Cart</small></a>
                     </div>
                 </div>
             </div>
-            <div class="container px-0">
-                <nav class="navbar navbar-light bg-dark navbar-expand-xl">
-                    <Link to={'/'} class="navbar-brand"><h1 class="text-white display-6">HOMESTYLER</h1></Link>
-                    <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                        <span class="fa fa-bars text-white"></span>
+            <div className="container px-0">
+                <nav className="navbar navbar-light bg-dark navbar-expand-xl">
+                    <Link to={'/'} className="navbar-brand"><h1 className="text-white display-6">HOMESTYLER</h1></Link>
+                    <button className="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span className="fa fa-bars text-white"></span>
                     </button>
-                    <div class="collapse navbar-collapse bg-dark" id="navbarCollapse">
-                        <div class="navbar-nav mx-auto">
-                            <Link to={'/'} class="nav-item nav-link text-white active">Home</Link>
-                            <Link to={'/designers-gallery'} class="nav-item nav-link text-white ">Designers Gallery</Link>
-                            <Link to={'/shop'} class="nav-item nav-link text-white ">Products</Link>
-                            <Link to={'/professtion'} class="nav-item nav-link text-white ">Professional Interior</Link>
-                            <Link to={'/contact'} class="nav-item nav-link text-white ">Contact Us</Link>
-                            <Link to={'/feedback'} class="nav-item nav-link text-white ">Feedback</Link>
-                            <Link to={'/about'} class="nav-item nav-link text-white ">About Us</Link>
+                    <div className="collapse navbar-collapse bg-dark" id="navbarCollapse">
+                        <div className="navbar-nav mx-auto">
+                            <Link to={'/'} className="nav-item nav-link text-white active">Home</Link>
+                            <Link to={'/designers-gallery'} className="nav-item nav-link text-white ">Designers Gallery</Link>
+                            <Link to={'/shop'} className="nav-item nav-link text-white ">Products</Link>
+                            <Link to={'/professtion'} className="nav-item nav-link text-white ">Professional Interior</Link>
+                            <Link to={'/contact'} className="nav-item nav-link text-white ">Contact Us</Link>
+                            <Link to={'/feedback'} className="nav-item nav-link text-white ">Feedback</Link>
+                            <Link to={'/about'} className="nav-item nav-link text-white ">About Us</Link>
 
                         </div>
                     </div>
