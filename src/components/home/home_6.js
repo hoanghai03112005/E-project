@@ -12,7 +12,7 @@ export default function Home_6() { //Fact
                             <div class="row g-3 py-5">
                                 <div class="col-md-12 col-lg-6" style={{ position: 'relative' }}>
                                     <a href="/shop">
-                                        <img src="img/homeImage/banner3.jpg" class="img w-100  bg-secondary rounded" />
+                                        <img src="img/homeImage/banner3.jpg" class="img w-100  bg-secondary rounded" height={'200px'} />
                                         <h3 style={{ position: 'absolute', color: '#fff', left: '25%', top: '45%', fontWeight: 'bold' }}>Living Room</h3>
                                     </a>
                                 </div>
