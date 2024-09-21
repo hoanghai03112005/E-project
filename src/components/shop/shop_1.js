@@ -194,7 +194,7 @@ export default function Shop_1() {
                                             <div className="col-md-4" key={item.id}>
                                                 <div className="rounded position-relative fruite-item">
                                                     <div className="fruite-img">
-                                                        <Link to={`http://localhost:3000/shop-detail/${item.id}`}><img src={item.img} className="img w-100 rounded-top" alt="" /></Link>
+                                                        <Link to={`http://localhost:3000/shop-detail/${item.id}`}><img src={item.img} className="img w-100 rounded-top" alt="" style={{ height: "200px" }} /></Link>
                                                     </div>
                                                     <div className="text-white bg-danger px-3 py-1 rounded position-absolute" style={{ top: '10px', left: '10px' }}>Sale {generateRandomDiscount()}%</div>
                                                     <div className="p-4 border border-secondary border-top-0 rounded-bottom">
