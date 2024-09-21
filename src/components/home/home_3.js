@@ -6,7 +6,7 @@ export default function Home_3() { // Featurs
                     <div className="row g-4 justify-content-center">
                         <h1 className="tw-bold">Our Services</h1>
                         <div className="col-md-6 col-lg-4">
-                            <a href="/design-style">
+                            <a href="/designers-gallery">
                                 <div className="service-item bg-white border-3 border-secondary border-dark hover-zoom">
                                     <img src="img/homeImage/bookcase1.jpg" className="img-fluid w-100 rounded" alt="" />
                                     <div className="px-4 rounded-bottom">
@@ -19,7 +19,7 @@ export default function Home_3() { // Featurs
                             </a>
                         </div>
                         <div className="col-md-6 col-lg-4">
-                            <a href="/design-style">
+                            <a href="/designers-gallery">
                                 <div className="service-item bg-white border-3 border-secondary border-dark">
                                     <img src="img/homeImage/sofa2.jpg" className="img-fluid w-100 rounded" alt="" />
                                     <div className="px-4 rounded-bottom">
@@ -32,7 +32,7 @@ export default function Home_3() { // Featurs
                             </a>
                         </div>
                         <div className="col-md-6 col-lg-4">
-                            <a href="/design-style">
+                            <a href="/designers-gallery">
                                 <div className="service-item bg-white border-3 border-secondary border-dark">
                                     <img src="img/homeImage/sofa3.jpg" className="img-fluid w-100 rounded" alt="" />
                                     <div className="px-4 rounded-bottom">
